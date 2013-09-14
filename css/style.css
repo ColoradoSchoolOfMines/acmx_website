@@ -15,12 +15,19 @@ body{
 	margin-top: -6px;
 	letter-spacing: -3px;
 }
+#header a{
+	color: inherit;
+	text-decoration: none;
+}
 #buttons{
 	letter-spacing: 0;
 	display: inline-block;
-	font-size: 34px;
+	font-size: 32px;
 	float: right;
-	line-height: 96px;
+	line-height: 95px;
+}
+#buttons a:hover{
+	text-decoration: underline;
 }
 #footer{
 	font-size: 15px;
@@ -37,11 +44,18 @@ body{
 #red{
 	color: #933;
 }
+#focus{
+	width: 100%;
+	height: 400px;
+	background-color: #eee;
+	margin-bottom: 4px;
+	display: inline-block;
+}
 .square{
 	width: 311px;
 	background-color: #eee;
 	height: 310px;
 	display: inline-block;
-	margin: 0;
+	margin: 0px 0px -1px 0px;
 	padding: 0;
 }
