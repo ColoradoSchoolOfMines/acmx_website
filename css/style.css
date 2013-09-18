@@ -1,61 +1,9 @@
-html{
-	font-family: Open Sans;
-}
-body{
-	margin: 0;
-}
-.container{
-	width: 942px;
-	margin: auto;
-	padding: 0;
-}
 #header{
-	font-family: Open Sans Condensed;
-	font-size: 70px;
-	margin-top: -6px;
-	letter-spacing: -3px;
-}
-#header a{
-	color: inherit;
-	text-decoration: none;
-}
-#buttons{
-	letter-spacing: 0;
-	display: inline-block;
-	font-size: 32px;
-	float: right;
-	line-height: 95px;
-}
-#buttons a:hover{
-	text-decoration: underline;
+	background:green;
 }
 #footer{
-	font-size: 15px;
-	color: #bbb;
-	margin-bottom: 10px;
+	background:red;
 }
-#footer a{
-	color: inherit;
-}
-#grey{
-	color: #bbb;
-	font-size: 40px;
-}
-#red{
-	color: #933;
-}
-#focus{
-	width: 100%;
-	height: 400px;
-	background-color: #eee;
-	margin-bottom: 4px;
-	display: inline-block;
-}
-.square{
-	width: 311px;
-	background-color: #eee;
-	height: 310px;
-	display: inline-block;
-	margin: 0px 0px -1px 0px;
-	padding: 0;
+#random{
+	background:yellow;
 }
