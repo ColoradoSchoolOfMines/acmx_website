@@ -4,19 +4,20 @@ html{
 body{
 	margin: 0;
 }
-#bottons{
-	float:right;
-}
 #grey{
 	color: #bbb;
 	font-size: 40px;
 }
 #red{
-	color: #933;
+	color: #DA4F49;
 }
 .square{
 	background-color: #eee;
 	display: inline-block;
 	margin: 0;
 	padding: 0;
+}
+a#logo{
+	color: #2F96B4;
+	text-decoration: none;
 }

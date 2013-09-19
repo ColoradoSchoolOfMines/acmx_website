@@ -10,13 +10,17 @@
 </head>
 <body>
 <div class="container-fluid">
-	<div class="page-header" id="header">
-		<h1>
-			<a href="#">acmx<span id="red">labs</span><span id="grey">.org</span></a>
-			<small id="botttons">
-					<a href="#">who we are</a> &middot; 
-					<a href="#">our projects</a> &middot; 
-					<a href="#">support us</a>
-			</small>
-		</h1>
+<div class="row-fluid">
+	<div class="span10 offset1">
+		<div class="page-header" id="header">
+			<h1>
+				<a id="logo" href="#">acmx<span id="red">labs</span><span id="grey">.org</span></a>
+				<div class="btn-group pull-right">
+						<a class="btn btn-large btn-info" href="#">who we are</a> 
+						<a class="btn btn-large btn-info" href="#">our projects</a> 
+						<a class="btn btn-large btn-success" href="#">support us</a>
+				</div>
+			</h1>
+		</div>
 	</div>
+</div>
