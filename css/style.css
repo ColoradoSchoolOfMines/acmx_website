@@ -1,9 +1,45 @@
+html{
+	font-family: Open Sans;
+}
+body{
+	margin: 0;
+}
+.container{
+	width: 942px;
+	margin: auto;
+	padding: 0;
+}
 #header{
-	background:green;
+	font-family: Open Sans Condensed;
+	font-size: 70px;
+	margin-top: -6px;
+	letter-spacing: -3px;
+}
+#buttons{
+	letter-spacing: 0;
+	display: inline-block;
+	font-size: 34px;
+	float: right;
+	line-height: 96px;
 }
 #footer{
-	background:red;
+	font-size: 15px;
+	color: #bbb;
+	margin-bottom: 10px;
 }
-#random{
-	background:yellow;
+#footer a{
+	color: inherit;
+}
+#grey{
+	color: #bbb;
+	font-size: 40px;
+}
+#red{
+	color: #933;
+}
+.square{
+	background-color: #eee;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
 }
