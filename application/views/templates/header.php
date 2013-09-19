@@ -9,9 +9,14 @@
 <script src="js/bootstrap.js"></script>
 </head>
 <body>
-<div class="container">
-<div id="header">
-<a href="#">acmx<span id="red">labs</span><span id="grey">.org</span></a>
-<div id="buttons">
-</div>
-</div>
+<div class="container-fluid">
+	<div class="page-header" id="header">
+		<h1>
+			<a href="#">acmx<span id="red">labs</span><span id="grey">.org</span></a>
+			<small id="botttons">
+					<a href="#">who we are</a> &middot; 
+					<a href="#">our projects</a> &middot; 
+					<a href="#">support us</a>
+			</small>
+		</h1>
+	</div>
