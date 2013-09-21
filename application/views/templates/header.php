@@ -15,7 +15,7 @@
 	<div class="span10 offset1">
 		<div class="page-header" id="header">
 			<h1>
-				<a id="logo" href="/home">acmx<span id="red">labs</span><span id="grey">.org</span></a>
+				<a id="logo" href="/">acmx<span id="red">labs</span><span id="grey">.org</span></a>
 				<div class="btn-group pull-right">
 						<a class="btn btn-large btn-info" href="/about">who we are</a> 
 						<a class="btn btn-large btn-info" href="/projects">our projects</a> 
