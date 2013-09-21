@@ -5,8 +5,9 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css' />
 <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
 <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css" />
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.js"></script>
+<script src="/js/script.js"></script>
 </head>
 <body>
 <div class="container-fluid">
