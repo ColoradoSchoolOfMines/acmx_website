@@ -65,7 +65,8 @@ $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
 
-$db['test']['hostname'] = '67.177.211.3369';
+$db['test']['hostname'] = '67.177.211.65';
+$db['test']['port'] = 3369;
 $db['test']['username'] = 'acmxtest';
 $db['test']['password'] = 'password';
 $db['test']['database'] = 'acmxtest';
