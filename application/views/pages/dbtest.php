@@ -1,5 +1,3 @@
-hello
-
 <?php
 
 $this->load->database();
