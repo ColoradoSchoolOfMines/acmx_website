@@ -1,8 +1,10 @@
 html{
-	font-family: Open Sans;
+	height: 100%;
 }
 body{
+	height: 100%;
 	margin: 0;
+	font-family: Open Sans, Helvetica, Arial, sans-serif !important;
 }
 #grey{
 	color: #bbb;
@@ -14,10 +16,13 @@ body{
 .square{
 	background-color: #eee;
 	display: inline-block;
-	margin: 0;
+	margin: 0 !important;
+	width: 33.333333% !important;
 	padding: 0;
+	margin-bottom: 10px;
 }
 a#logo{
+	font-family: Open Sans Condensed;
 	color: #2F96B4;
 	text-decoration: none;
 }
