@@ -29,13 +29,21 @@ a#logo{
 #thinmenu{
 	margin-top: 8px;
 }
-@media(min-width: 680px){
+@media(min-width: 694px){
 	#thinmenu{
 		display: none;
 	}
 }
-@media(max-width: 679px){
+@media(max-width: 694px){
 	#widemenu{
+		display: none;
+	}
+}
+@media(max-width: 325px){
+	#widemenu{
+		display: none;
+	}
+	#thinmenu{
 		display: none;
 	}
 }
