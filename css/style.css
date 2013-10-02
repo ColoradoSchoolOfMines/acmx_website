@@ -26,3 +26,16 @@ a#logo{
 	color: #2F96B4;
 	text-decoration: none;
 }
+#thinmenu{
+	margin-top: 8px;
+}
+@media(min-width: 680px){
+	#thinmenu{
+		display: none;
+	}
+}
+@media(max-width: 679px){
+	#widemenu{
+		display: none;
+	}
+}

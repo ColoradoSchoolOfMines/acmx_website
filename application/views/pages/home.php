@@ -1,5 +1,5 @@
 <div class="row-fluid">
-	<div class="span10 offset1">
+	<div class="span12">
 		<div class="row-fluid">
 			<div class="span4 square">
 				BOX1
@@ -14,7 +14,7 @@
 	</div>
 </div>
 <div class="row-fluid">
-	<div class="span10 offset1">
+	<div class="span12">
 		<div class="row-fluid">
 			<div class="span4 square">
 				BOX4
