@@ -1,8 +1,8 @@
 <?php
-$this->load->database('acmx');
+$this->load->database();
 $query = $this->db->get('projects');
 foreach($query->result() as $row){
-	if($page == $row->url){
+	if($project == $row->url){
 		$name = $row->name;
 		$id = $row->id;
 		$info = $row->information;
