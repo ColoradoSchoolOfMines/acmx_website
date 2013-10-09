@@ -1,6 +1,7 @@
 <?php 
 $this->load->database();
 $query = $this->db->get('projects');
+$row = $query->result();
 ?>
 
 <div class="row-fluid" id="projectmain">
