@@ -4,14 +4,13 @@ $this->load->database();
 $query = $this->db->get('projects');
 foreach($query->result() as $row){
 	// We're collecting the entire project table's information and sorting through it with PHP, this is actually faster than sorting in MySQL.
-	if($project == $row->url){
-		// We only care about collecting the values for the project the user requested, naturally.  The $project variable came to use from the pages.php controller, it was passed to this script as $data['project'].
+	if($project == $row->url){	// We only care about collecting the values for the project the user requested, naturally.  The $project variable came to use from the pages.php controller, it was passed to this script as $data['project'].
 		$name = $row->name;
 		$id = $row->id;
 		$info = $row->information;
 	}
 }
-// After this next "<?" delimiter we'll be outputting straight HTML.
+// After this next "? >" delimiter we'll be outputting straight HTML.
 ?>
 <div class="row-fluid" id="projectmain">
 <?= $name // This is a quick-echo, a small snippet of PHP we're using to output this variable. ?>
