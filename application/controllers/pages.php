@@ -7,19 +7,20 @@ class Pages extends CI_Controller {
 		{
 			$this->load->database('acmx');
 			$query = $this->db->get('projects');
-			if($row = $query->result_array()){
-				$names = [];
-				foreach($row['name'] as $key->$name){
-					$names[$key] = preg_replace('/[^a-z]/', '', strtolower($name));
-				}
-				if(in_array($page, $names)){
-					$data['project'] = $page;
-					$this->load->view('templates/header',$data);
-					$this->load->view('pages/project',$data);
-					$this->load->view('templates/footer',$data);
-				}else{
-					show_404();
-				}
+			foreach($query->result_array() as $row){
+				echo $row;
+				// $names = [];
+				// foreach($row['name'] as $key->$name){
+				// 	$names[$key] = preg_replace('/[^a-z]/', '', strtolower($name));
+				// }
+				// if(in_array($page, $names)){
+				// 	$data['project'] = $page;
+				// 	$this->load->view('templates/header',$data);
+				// 	$this->load->view('pages/project',$data);
+				// 	$this->load->view('templates/footer',$data);
+				// }else{
+				// 	show_404();
+				// }
 			}
 		}
 
