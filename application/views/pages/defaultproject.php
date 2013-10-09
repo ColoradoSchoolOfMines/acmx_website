@@ -1,13 +1,12 @@
 <?php 
 $this->load->database();
-$query = $this->db->get('users');
-foreach($query->result() as $row){
-	echo $row->email;	
-}
+$query = $this->db->get('projects');
 ?>
 
 <div class="row-fluid" id="projectmain">
-
+<?= $row->name; ?>
+<br />
+<?= $row->information; ?>
 </div>
 <div class="row-fluid" id="projectinfo">
 	<div class="span8" id="projectblog">
