@@ -19,12 +19,12 @@ class Pages extends CI_Controller {
 			}else{
 				show_404();
 			}
+		}else{
+			$data['title'] = ucfirst($page);
+			$this->load->view('templates/header', $data);
+			$this->load->view('pages/'.$page, $data);
+			$this->load->view('templates/footer', $data);
 		}
-
-		$data['title'] = ucfirst($page);
-		$this->load->view('templates/header', $data);
-		$this->load->view('pages/'.$page, $data);
-		$this->load->view('templates/footer', $data);
 	}
 }
 
