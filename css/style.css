@@ -29,6 +29,10 @@ a#logo{
 #thinmenu{
 	margin-top: 8px;
 }
+#projectmain{
+	background-color: #555;
+	min-height: 240px;
+}
 @media(min-width: 694px){
 	#thinmenu{
 		display: none;
