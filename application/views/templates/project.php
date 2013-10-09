@@ -1,7 +1,7 @@
 <?php
 $this->load->database('acmx');
 $query = $this->db->get('projects');
-foreach($query->results() as $row){
+foreach($query->result() as $row){
 	if($page === $row['url']){
 		$name = $row['name'];
 		$id = $row['id'];
