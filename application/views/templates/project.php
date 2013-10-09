@@ -2,10 +2,10 @@
 $this->load->database('acmx');
 $query = $this->db->get('projects');
 foreach($query->result() as $row){
-	if($page == $row['url']){
-		$name = $row['name'];
-		$id = $row['id'];
-		$info = $row['information'];
+	if($page == $row->url){
+		$name = $row->name;
+		$id = $row->id;
+		$info = $row->information;
 	}
 }
 ?>
