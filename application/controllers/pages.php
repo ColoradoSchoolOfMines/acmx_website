@@ -12,7 +12,7 @@ class Pages extends CI_Controller {
 				foreach($row['name'] as $key->$name){
 					$names[$key] = preg_replace('/[^a-z]/', '', strtolower($name));
 				}
-				if(in_array($page, $names){
+				if(in_array($page, $names)){
 					$data['project'] = $page;
 					$this->load->view('templates/header',$data);
 					$this->load->view('pages/project',$data);
