@@ -1,7 +1,7 @@
 <?php 
 $this->load->database();
 $query = $this->db->get('projects');
-$row = $query->result();
+foreach($query->result() as $row){
 ?>
 
 <div class="row-fluid" id="projectmain">
@@ -17,3 +17,7 @@ $row = $query->result();
 	right
 	</div>
 </div>
+
+<?php
+}
+?>
