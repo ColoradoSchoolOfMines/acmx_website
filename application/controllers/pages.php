@@ -14,7 +14,7 @@ class Pages extends CI_Controller {
 			if(in_array($page, $names)){
 				$data['project'] = $page;
 				$this->load->view('templates/header',$data);
-				$this->load->view('pages/project',$data);
+				$this->load->view('templates/project',$data);
 				$this->load->view('templates/footer',$data);
 			}else{
 				show_404();
