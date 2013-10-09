@@ -65,11 +65,11 @@ $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
 
 
-$db['test']['hostname'] = '67.177.211.65';
-$db['test']['port'] = 3369;
-$db['test']['username'] = 'acmxtest';
-$db['test']['password'] = 'password';
-$db['test']['database'] = 'acmxtest';
+$db['test']['hostname'] = 'localhost';
+$db['test']['port'] = 3306;
+$db['test']['username'] = 'acmx';
+$db['test']['password'] = 'acmxwebsite';
+$db['test']['database'] = 'acmx';
 $db['test']['dbdriver'] = 'mysql';
 $db['test']['dbprefix'] = '';
 $db['test']['pconnect'] = TRUE;

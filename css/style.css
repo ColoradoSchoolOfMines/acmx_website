@@ -30,8 +30,17 @@ a#logo{
 	margin-top: 8px;
 }
 #projectmain{
-	background-color: #555;
+	background-color: #eee;
 	min-height: 240px;
+}
+#projectinfo{
+	margin-top: 1%;
+}
+#projectblog{
+
+}
+#projectmembers{
+	background-color: #eee;
 }
 @media(min-width: 694px){
 	#thinmenu{
