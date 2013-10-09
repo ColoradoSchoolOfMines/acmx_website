@@ -8,7 +8,7 @@ class Pages extends CI_Controller {
 			$this->load->database('acmx');
 			$query = $this->db->get('projects');
 			foreach($query->result_array() as $row){
-				echo $row;
+				print_r($row);
 				// $names = [];
 				// foreach($row['name'] as $key->$name){
 				// 	$names[$key] = preg_replace('/[^a-z]/', '', strtolower($name));
