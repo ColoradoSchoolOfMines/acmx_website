@@ -9,7 +9,7 @@ class Pages extends CI_Controller {
 			$query = $this->db->get('projects');
 			$names = [];
 			foreach($query->result_array() as $row){
-				$names[] = preg_replace('/[^a-z]/', '', strtolower($row['name']));
+				$names[] = $row['url'];		// Get the smalltext version of the project name here
 			}
 			if(in_array($page, $names)){
 				$data['project'] = $page;
