@@ -11,7 +11,7 @@
 <body>
 <div class="container-fluid">
 <div class="row-fluid">
-	<div class="span12 offset">
+	<div class="span12">
 		<div class="page-header" id="header">
 			<h1>
 				<a id="logo" href="/">acmx<span id="red">labs</span><span id="grey">.org</span></a>
@@ -23,7 +23,9 @@
 				<div class="btn-group pull-right" id="thinmenu">
 					<a class="btn btn-large dropdown-toggle btn-info" data-toggle="dropdown" href="#"><span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li>Test</li>
+							<li><a href="/about">who we are</a></li>
+							<li><a href="/projects">our projects</a></li>
+							<li><a href="/support">support us</a></li>
 						</ul>
 				</div>
 			</h1>
