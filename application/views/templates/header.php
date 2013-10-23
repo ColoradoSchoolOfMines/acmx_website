@@ -14,7 +14,7 @@
 	<div class="span12">
 		<div class="page-header" id="header">
 			<h1>
-				<a id="logo" href="/"><img src="/acmx.jpeg" /></a>
+				<a id="logo" href="/"><img src="https://mail.google.com/mail/u/0/?ui=2&ik=f2915a29ba&view=att&th=141e2c081f5d5c0c&attid=0.1.1&disp=emb&zw&atsh=1" /></a>
 				<div class="btn-group pull-right" id="widemenu">
 						<a class="btn btn-large btn-info" href="/about">who we are</a> 
 						<a class="btn btn-large btn-info" href="/projects">our projects</a> 
