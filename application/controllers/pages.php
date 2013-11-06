@@ -9,7 +9,7 @@ class Pages extends CI_Controller {
 			// Chances are, they're looking for a project.  Connect to the database here.
 			$this->load->database('acmx');
 			$query = $this->db->get('projects');	// Pull the projects table.
-			$names = [];	// Create an array for project names.
+			$names = array();	// Create an array for project names.
 			foreach($query->result_array() as $row){	// Loop through the list of projects.
 				$names[] = $row['url'];		// Get the smalltext version of the project name here
 			}
