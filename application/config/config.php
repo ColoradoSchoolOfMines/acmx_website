@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://afrench.net/';
+$config['base_url']	= 'http://acmxlabs.mines.edu/';
 
 /*
 |--------------------------------------------------------------------------
