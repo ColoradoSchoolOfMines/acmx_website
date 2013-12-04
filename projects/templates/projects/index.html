@@ -1,0 +1,13 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'projects/style.css' %}" />
+
+{% if latest_project_list %}
+    <ul>
+    {% for project in latest_project_list %}
+        <li><a href="{% url 'projects:detail' project.id %}">{{  project.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No projects are available.</p>
+{% endif %}
