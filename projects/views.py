@@ -3,11 +3,16 @@ from django.shortcuts import render, get_object_or_404
 from django.core.urlresolvers import reverse
 from django.views import generic
 
-from projects.models import Projects
+from projects.models import Project
 
 
 class IndexView(generic.ListView):
     template_name = 'projects/index.html'
+    context_object_name = 'latest_project_list'
+
+    def get_queryset(self):
+        """Return the last five published polls."""
+        return Project.objects.order_by('-pub_date')[:5]
 
 class AboutView(generic.ListView):
     template_name = 'projects/about.html'
@@ -15,6 +20,9 @@ class AboutView(generic.ListView):
 class SupportView(generic.ListView):
     template_name = 'projects/support.html'
 
-def detail(request, project_id):
-    p = get_object_or_404(Projects, pk=project_id)
+class DetailView(generic.DetailView):
+    model = Project
+    template_name = 'projects/detail.html'
 
+def detail(request, project_id):
+    p = get_object_or_404(Project, pk=project_id)
