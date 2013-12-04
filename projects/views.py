@@ -14,11 +14,23 @@ class IndexView(generic.ListView):
         """Return the last five published polls."""
         return Project.objects.order_by('-pub_date')[:5]
 
-class AboutView(generic.ListView):
+class AboutView(generic.TemplateView):
     template_name = 'projects/about.html'
 
-class SupportView(generic.ListView):
+    def get_context_data(self, **kwargs):
+        return super(AboutView, self).get_context_data(**kwargs)
+
+class ContactView(generic.TemplateView):
+    template_name = 'projects/contact.html'
+
+    def get_context_data(self, **kwargs):
+        return super(ContactView, self).get_context_data(**kwargs)
+
+class SupportView(generic.TemplateView):
     template_name = 'projects/support.html'
+
+    def get_context_data(self, **kwargs):
+        return super(SupportView, self).get_context_data(**kwargs)
 
 class DetailView(generic.DetailView):
     model = Project
