@@ -3,7 +3,7 @@ from mongoengine import *
 from django.utils import timezone
 
 class Project(Document):
-    project_id = SequenceField()
+    project_id = StringField(max_length=25)
     title = StringField(max_length=200)
     description = StringField(max_length=200)
     pub_date = DateTimeField('date published')

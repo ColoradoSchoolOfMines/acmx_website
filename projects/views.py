@@ -43,4 +43,4 @@ class DetailView(generic.DetailView):
                 project_id=self.kwargs.get('pk'))
 
 def detail(request, project_id):
-    p = get_document_or_404(Project, project_id=project_id)
+    p = get_document_or_404(Project, project_id=int(project_id))
