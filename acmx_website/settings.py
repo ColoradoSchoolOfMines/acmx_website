@@ -1,5 +1,5 @@
 # Django settings for acmx_website project.
-from mongoengine import *
+#from mongoengine import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -12,8 +12,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.dummy', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django_mongodb_engine',
+        'NAME': 'testdb',
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -23,7 +23,7 @@ DATABASES = {
 }
 
 # For mongoengine:
-connect('testdb')
+#connect('testdb')
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
@@ -39,7 +39,7 @@ TIME_ZONE = 'America/Denver'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
-SITE_ID = 1
+SITE_ID = u'52deb93b2316593f134f98dd'
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -128,6 +128,9 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    # Mongo stuff.
+    'django_mongodb_engine',
+    # ACMx stuff
     'projects'
 )
 
