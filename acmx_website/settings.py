@@ -1,4 +1,5 @@
 # Django settings for acmx_website project.
+from mongoengine import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -20,6 +21,9 @@ DATABASES = {
         'PORT': '',                      # Set to empty string for default.
     }
 }
+
+# For mongoengine:
+connect('testdb')
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
