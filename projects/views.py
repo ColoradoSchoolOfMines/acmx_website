@@ -1,7 +1,8 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from django.core.urlresolvers import reverse
 from django.views import generic
+from mongoengine.django.shortcuts import get_document_or_404
 
 from projects.models import Project
 
@@ -36,5 +37,10 @@ class DetailView(generic.DetailView):
     model = Project
     template_name = 'projects/detail.html'
 
+    def get_object(self, queryset=None):
+        """Custom get_object override for our Mongo collection."""
+        return get_document_or_404(Project,
+                project_id=self.kwargs.get('pk'))
+
 def detail(request, project_id):
-    p = get_object_or_404(Project, pk=project_id)
+    p = get_document_or_404(Project, project_id=project_id)

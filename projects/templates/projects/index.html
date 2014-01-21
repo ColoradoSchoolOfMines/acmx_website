@@ -20,7 +20,7 @@
 {% if latest_project_list %}
     {% for project in latest_project_list %}
         <div class="square">
-            <a href="{% url 'projects:detail' project.id %}">{{ project.title }}</a>
+            <a href="{% url 'projects:detail' project.project_id %}">{{ project.title }}</a>
         </div>
     {% endfor %}
 {% else %}

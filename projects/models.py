@@ -1,11 +1,12 @@
 import datetime
-from django.db import models
+from mongoengine import *
 from django.utils import timezone
 
-class Project(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+class Project(Document):
+    project_id = SequenceField()
+    title = StringField(max_length=200)
+    description = StringField(max_length=200)
+    pub_date = DateTimeField('date published')
     
     def __unicode__(self):
         return self.title
