@@ -36,10 +36,9 @@ class DetailView(generic.DetailView):
     model = Project
     template_name = 'projects/detail.html'
 
-#    def get_object(self, queryset=None):
-#        """Custom get_object override for our Mongo collection."""
-#        return get_object_or_404(Project,
-#                project_id=self.kwargs.get('pk'))
+    def get_object(self, queryset=None):
+        """Custom get_object override for our Mongo collection."""
+        return get_object_or_404(Project, project_id=self.kwargs.get('pk'))
 
 def detail(request, project_id):
     p = get_object_or_404(Project, project_id=project_id)
