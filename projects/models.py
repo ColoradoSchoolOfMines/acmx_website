@@ -1,12 +1,13 @@
 import datetime
 from django.db import models
+from django.contrib.auth.models import User
 from django.utils import timezone
 
 class Project(models.Model):
     project_id = models.CharField(max_length=50)
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    team = models.ManyToManyField(UserProfile)
+    team = models.ManyToManyField('UserProfile')
     pub_date = models.DateTimeField('date published', auto_now=True,
             auto_now_add=True)
     
@@ -22,18 +23,20 @@ class Project(models.Model):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
-    projects = models.ManyToManyField(Project)
+    projects = models.ManyToManyField('Project', blank=True, null=True)
 
     SEMESTER_CHOICES = (
-            (SPRING, 'Spring'),
-            (FALL, 'Fall'),
+            ('spring', 'Spring'),
+            ('fall', 'Fall'),
     )
 
     email = models.CharField(max_length=200)
-    phone = models.CharField(_('Number'), maxlength = 40)
-    homepage = models.URLFiels(max_length=200)
+    phone = models.CharField(max_length=40)
+    homepage = models.URLField(max_length=200)
     major = models.CharField(max_length=200)
     grad_year = models.PositiveSmallIntegerField()
     grad_semester = models.CharField(max_length=10,
             choices=SEMESTER_CHOICES)
 
+    def __unicode__(self):
+        return self.user.username
