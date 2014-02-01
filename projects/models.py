@@ -3,7 +3,11 @@ from django.db import models
 from django.contrib.auth.models import User
 from djangotoolbox import fields
 from django.utils import timezone
-from django import forms
+import forms
+
+class CategoryField(fields.ListField):
+    def formfield(self, **kwargs):
+        return models.Field.formfield(self, forms.StringListField, **kwargs)
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
@@ -28,7 +32,7 @@ class Project(models.Model):
     project_id = models.CharField(max_length=50)
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    team = fields.ListField(models.ForeignKey(UserProfile))
+    team = forms.StringListField(models.ForeignKey(UserProfile))
     pub_date = models.DateTimeField('date published', auto_now=True,
             auto_now_add=True)
     
@@ -41,46 +45,3 @@ class Project(models.Model):
     was_published_recently.admin_order_field = 'pub_date'
     was_published_recently.boolean = True
     was_published_recently.short_description = 'Published recently?'
-
-# Everything below here is just to make forms and the admin interface
-# work as expected. You should never need to modify it.
-
-class ModelListField(fields.ListField):
-    def __init__(self, embedded_model=None, *args, **kwargs):
-        super(ModelListField, self).__init__(*args, **kwargs)
-        self._model = embedded_model.embedded_model
-
-    def formfield(self, **kwargs):
-        return FormListField(**kwargs)
-
-class ListFieldWidget(forms.SelectMultiple):
-    pass
-
-class FormListField(forms.MultipleChoiceField):
-    """
-    This is a custom form field that can display a ModelListField as a
-    Multiple Select GUI element.
-    """
-    widget = ListFieldWidget
-
-    def __init__(self, model=None, *args, **kwargs):
-        self._model = model
-        super(FormListField, self).__init__(*args, **kwargs)
-        self.widgets.choices = [(unicode(i.pk), i) for i in self._model.objects.all()]
-    
-    def to_python(self, value):
-        return [self._model.objects.get(pk=key) for key in value]
-
-    def clean(self, value):
-        # TODO: clean things?
-        return value
-
-class ProjectForm(forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        super(ProjectForm, self).__init__(*args, **kwargs)
-        self.fields['field'].widget.choices = [(i.pk, i) for i in UserProfile.objects.all()]
-        if self.instance.pk:
-            self.fields['field'].initial = self.instance.field
-
-    class Meta:
-        model = Project
