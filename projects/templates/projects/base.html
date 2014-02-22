@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- stylesheet link(s) -->
+    <!-- js link(s) -->
+    <title>{% block title %}ACMx Labs{% endblock %}</title>
+</head>
+<body>
+    <header>
+        {% block header %}
+        <!-- header stuff goes here -->
+        {% endblock %}
+    </header>
+
+    <div id="content">
+        {% block content %}
+        <!-- Main page content goes here -->
+        {% endblock %}
+    </div>
+
+    <footer>
+        {% block footer %}
+        &copy; 2014 ACMxLabs.org
+        {% endblock %}
+    </footer>
+</body>
+</html>

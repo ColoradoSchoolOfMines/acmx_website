@@ -5,9 +5,14 @@ from djangotoolbox import fields
 from django.utils import timezone
 import forms
 
-class CategoryField(fields.ListField):
+class GenericListField(fields.ListField):
     def formfield(self, **kwargs):
         return models.Field.formfield(self, forms.StringListField, **kwargs)
+
+class GenericDictField(fields.DictField):
+    def formfield(self, **kwargs):
+        return models.Field.formfield(self, forms.DictionaryField,
+                **kwargs)
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
@@ -24,6 +29,7 @@ class UserProfile(models.Model):
     grad_year = models.PositiveSmallIntegerField()
     grad_semester = models.CharField(max_length=10,
             choices=SEMESTER_CHOICES)
+    stars = GenericListField()
 
     def __unicode__(self):
         return self.user.username
@@ -32,10 +38,13 @@ class Project(models.Model):
     project_id = models.CharField(max_length=50)
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    team = forms.StringListField(models.ForeignKey(UserProfile))
     pub_date = models.DateTimeField('date published', auto_now=True,
             auto_now_add=True)
-    
+    team = GenericListField()
+    main_image = models.CharField(max_length=200)
+    pages = GenericDictField()
+    tags = GenericListField()
+
     def __unicode__(self):
         return self.title
 
