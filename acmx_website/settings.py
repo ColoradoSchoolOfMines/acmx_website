@@ -164,3 +164,6 @@ LOGGING = {
         },
     }
 }
+
+# Some settings specific to ACMxLabs
+LOGIN_REDIRECT_URL='/'
