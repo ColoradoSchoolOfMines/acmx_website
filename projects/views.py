@@ -99,7 +99,7 @@ class UserProfileView(generic.DetailView):
         return get_object_or_404(UserProfile,
                 username=self.kwargs.get('pk'))
 
-class UserProfileEditView(generic.DetailView):
+class UserProfileEditView(generic.edit.UpdateView):
     model = UserProfile
     template_name = 'projects/user_profile_edit.html'
 
@@ -107,6 +107,10 @@ class UserProfileEditView(generic.DetailView):
         """Custom get_object override for our Mongo collection."""
         return get_object_or_404(UserProfile,
                 username=self.kwargs.get('pk'))
+
+    def get_success_url(self):
+        return reverse('projects:user_profile_edit',
+                kwargs={'pk': self.kwargs.get('pk')})
 
     # Make this view login-required.
     @method_decorator(login_required)
