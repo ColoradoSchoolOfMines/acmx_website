@@ -6,6 +6,7 @@ from django.utils.decorators import method_decorator
 from django.views import generic
 
 from projects.models import Project, UserProfile
+from projects.modelforms import ProjectForm, UserProfileForm
 
 # This is a temporary method, it will be removed later.
 # Don't bother trying to improve it.
@@ -71,7 +72,7 @@ class UserListView(generic.ListView):
     def get_queryset(self):
         return UserProfile.objects.order_by('user')
 
-class ProjectEditView(generic.DetailView):
+class ProjectEditView(generic.edit.UpdateView):
     model = Project
     template_name = 'projects/project_edit.html'
 
@@ -79,6 +80,10 @@ class ProjectEditView(generic.DetailView):
         """Custom get_object override for our Mongo collection."""
         return get_object_or_404(Project,
                 project_id=self.kwargs.get('pk'))
+
+    def get_success_url(self):
+        return reverse('projects:edit',
+                kwargs={'pk': self.kwargs.get('pk')})
 
     # Make this view login-required.
     @method_decorator(login_required)

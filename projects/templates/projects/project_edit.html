@@ -13,5 +13,10 @@
 
     <div id="page_content">
         This is the page content for {{ project.title }}.
+        <table><form action="{{ action }}" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Save"></input>
+        </form></table>
     </div>
 {% endblock %}
