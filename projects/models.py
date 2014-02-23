@@ -23,6 +23,7 @@ class UserProfile(models.Model):
             ('fall', 'Fall'),
     )
 
+    name = models.CharField(max_length=75)
     email = models.CharField(max_length=200)
     phone = models.CharField(max_length=40)
     homepage = models.URLField(max_length=200)

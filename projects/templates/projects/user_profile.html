@@ -1,0 +1,12 @@
+{% extends "projects/base.html" %}
+{% load staticfiles %}
+
+{% block title %}{{ user.username }} | ACMx Labs{% endblock %}
+
+{% block content %}
+    <div>
+        Username: {{ userprofile.user.username }}<br>
+        Email: {{ userprofile.email }}<br>
+        ...<br>
+    </div>
+{% endblock %}
