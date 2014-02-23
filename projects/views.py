@@ -47,11 +47,6 @@ class DetailView(generic.DetailView):
     model = Project
     template_name = 'projects/detail.html'
 
-#    # Make this view login-required.
-#    @method_decorator(login_required)
-#    def dispatch(self, *args, **kwargs):
-#        return super(DetailView, self).dispatch(*args, **kwargs)
-
     def get_object(self, queryset=None):
         """Custom get_object override for our Mongo collection."""
         return get_object_or_404(Project,
@@ -85,6 +80,11 @@ class ProjectEditView(generic.DetailView):
         return get_object_or_404(Project,
                 project_id=self.kwargs.get('pk'))
 
+    # Make this view login-required.
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(ProjectEditView, self).dispatch(*args, **kwargs)
+
 class UserProfileView(generic.DetailView):
     model = UserProfile
     template_name = 'projects/user_profile.html'
@@ -102,6 +102,12 @@ class UserProfileEditView(generic.DetailView):
         """Custom get_object override for our Mongo collection."""
         return get_object_or_404(UserProfile,
                 username=self.kwargs.get('pk'))
+
+    # Make this view login-required.
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(UserProfileEditView, self).dispatch(*args, **kwargs)
+
 
 def detail(request, project_id):
     p = get_object_or_404(Project, project_id=project_id)
