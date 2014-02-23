@@ -42,6 +42,10 @@ div.button:hover{
 div.button:active{
 	background-color: #509EE5;
 }
+div.button a {
+    color: inherit;
+    text-decoration: none;
+}
 input#search{
 	width: 100px;
 	font-size: inherit;

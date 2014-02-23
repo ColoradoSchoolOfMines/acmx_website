@@ -18,9 +18,9 @@
             <img id="logo" src="{% static 'projects/acmx.png' %}" alt="ACMx" />
         </a>
         <div id="buttons">
-            <div class="button">Button</div>
-            <div class="button">Button</div>
-            <div class="button">Button</div>
+            <div class="button"><a href="{% url 'projects:about' %}">about</a></div>
+            <div class="button"><a href="{% url 'projects:contact' %}">contact</a></div>
+            <div class="button"><a href="{% url 'projects:support' %}">support us</a></div>
             <input id="search" type="Text" placeholder="Search" />
         </div>
         {% endblock %}
