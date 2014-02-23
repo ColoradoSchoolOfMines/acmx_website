@@ -14,7 +14,9 @@
 <body>
     <div id="header">
         {% block header %}
-        <img id="logo" src="{% static 'projects/acmx.png' %}" alt="ACMx" />
+        <a href="{% url 'projects:index' %}">
+            <img id="logo" src="{% static 'projects/acmx.png' %}" alt="ACMx" />
+        </a>
         <div id="buttons">
             <div class="button">Button</div>
             <div class="button">Button</div>
@@ -31,7 +33,7 @@
 
     <div id="footer">
         {% block footer %}
-        &copy; 2014 ACMxLabs.org
+        &copy; 2014 ACMx
         {% endblock %}
     </div>
 </body>
