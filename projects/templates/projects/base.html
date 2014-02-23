@@ -1,28 +1,38 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- stylesheet link(s) -->
-    <!-- js link(s) -->
+    <!-- stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{% static 'projects/newstyle.css' %}">
+    </link>
+    <!-- js -->
+    <script type="text/javascript" src="{% static 'projects/jquery.js' %}">
+    </script>
     <title>{% block title %}ACMx Labs{% endblock %}</title>
 </head>
 <body>
-    <header>
+    <div id="header">
         {% block header %}
-        <!-- header stuff goes here -->
-        {{ welcome_message }}
-        {% endblock %}
-    </header>
-
-    <div id="content">
-        {% block content %}
-        <!-- Main page content goes here -->
+        <img id="logo" src="{% static 'projects/acmx.png' %}" alt="ACMx" />
+        <div id="buttons">
+            <div class="button">Button</div>
+            <div class="button">Button</div>
+            <div class="button">Button</div>
+            <input id="search" type="Text" placeholder="Search" />
+        </div>
         {% endblock %}
     </div>
 
-    <footer>
+    <br><br><br>
+    {% block content %}
+        <!-- Main page content goes here -->
+    {% endblock %}
+
+    <div id="footer">
         {% block footer %}
         &copy; 2014 ACMxLabs.org
         {% endblock %}
-    </footer>
+    </div>
 </body>
 </html>

@@ -1,4 +1,5 @@
 {% extends "projects/base.html" %}
+{% load staticfiles %}
 
 {% block title %}{{ project.title }} | ACMx Labs{% endblock %}
 
@@ -11,7 +12,17 @@
         {% endfor %}
     </nav>
 
-    <div id="page_content">
-        This is the page content for {{ project.title }}.
+    <div class="project_intro" 
+         style="background-image: url('{% static 'projects/MilkyWayWallpaper.jpg' %}')">
+        <div class="wordbox">
+            <h1>{{ project.title }}</h1>
+            <!-- TODO: Replace this with the ajaxy pages[page] stuff. -->
+            <p>{{ project.description }}
+        </div>
+    </div>
+    <div class="content_container">
+        <div class="project_details">
+            <h1>{{ project.name }}</h1>
+        </div>
     </div>
 {% endblock %}
