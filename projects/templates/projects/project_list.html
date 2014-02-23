@@ -1,0 +1,13 @@
+{% extends "projects/base.html" %}
+
+{% block title %}Projects | ACMx Labs{% endblock %}
+
+{% block content %}
+    {% for project in project_list %}
+        <!-- Link to custom project pages. Use AJAX stuff to avoid
+             having to define more urls in Django -->
+        <a href="{% url 'projects:detail' project.project_id %}">{{ project }}</a>
+        <a href="{% url 'projects:edit' project.project_id %}">[EDIT]</a>
+        <br>
+    {% endfor %}
+{% endblock %}

@@ -16,6 +16,7 @@ class GenericDictField(fields.DictField):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
+    username = models.CharField(max_length=50)
 
     SEMESTER_CHOICES = (
             ('spring', 'Spring'),
@@ -33,7 +34,7 @@ class UserProfile(models.Model):
 
     def __unicode__(self):
         return self.user.username
-        
+
 class Project(models.Model):
     project_id = models.CharField(max_length=50)
     title = models.CharField(max_length=200)
