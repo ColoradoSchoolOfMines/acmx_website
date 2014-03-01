@@ -29,7 +29,7 @@ function slideUp(slider)
 				var slided = Math.round($(slider).css('top').replace('px','') - headerHeight);
 				$(slider).css('background-position', '50% ' + (- (window.RATE * slided)) + 'px');
 			},
-			always: function(){
+			complete: function(){
 				$(slider).addClass('hidden').css('top', -(sliderHeight));
 			}
 		});
@@ -45,7 +45,7 @@ function slideDown(slider)
 				var slided = Math.round($(slider).css('top').replace('px','') - headerHeight);
 				$(slider).css('background-position', '50% ' +  (-(window.RATE * slided)) + 'px');
 			},
-			always: function(){
+			complete: function(){
 				$(slider).removeClass('hidden').css('top', headerHeight);
 			}
 		});
@@ -101,10 +101,6 @@ function detectMouseMomentum(wheelDelta)
 			window.repeatFlag = 0;
 		}, window.REPEATTHRESH);
 	}
-
-
-
-	console.log(window.wheelMomentum);
 }
 function bindSliders()
 {
@@ -132,7 +128,7 @@ function bindSliders()
 
 // On page load:
 window.RATE = 0.7;
-window.scrollThresh = 1500;
+window.scrollThresh = 500;
 window.repeatFlag = 0;
 window.DURATION = 1200;
 window.REPEATTHRESH = 1.2 * window.DURATION;
