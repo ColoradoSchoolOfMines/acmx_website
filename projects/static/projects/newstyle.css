@@ -15,7 +15,11 @@ div#header{
 	padding: 10px 10px 10px 10px;
 	position: fixed;
 	width: 100%;
+    top: 0;
 	z-index: 999;
+}
+div#container {
+    margin-top: 40px;
 }
 div#spacer{
 	height: 60px;

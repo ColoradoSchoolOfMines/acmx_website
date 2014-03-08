@@ -26,12 +26,11 @@
         {% endblock %}
     </div>
 
-    <br><br><br>
-    {{ welcome_message }}
-
-    {% block content %}
-        <!-- Main page content goes here -->
-    {% endblock %}
+    <div id="container">
+        {% block content %}
+            <!-- Main page content goes here -->
+        {% endblock %}
+    </div>
 
     <div id="footer">
         {% block footer %}
