@@ -22,9 +22,6 @@ DATABASES = {
     }
 }
 
-# For mongoengine:
-#connect('testdb')
-
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
@@ -43,11 +40,11 @@ SITE_ID = 1 # u'52deb93b2316593f134f98dd'
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = True
+USE_I18N = False
 
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale.
-USE_L10N = True
+USE_L10N = False
 
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
@@ -117,6 +114,10 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+AUTHENTICATION_BACKENDS = (
+    'permission_backend_nonrel.backends.NonrelPermissionBackend',
+)
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -130,6 +131,7 @@ INSTALLED_APPS = (
     # Mongo stuff.
     'djangotoolbox',
     'django_mongodb_engine',
+    'permission_backend_nonrel',
     # ACMx stuff
     'projects'
 )
