@@ -48,6 +48,10 @@ div.button:hover{
 div.button:active{
 	background-color: #509EE5;
 }
+div.button a{
+	color: inherit;
+	text-decoration: inherit;
+}
 input#search{
 	width: 100px;
 	font-size: inherit;
@@ -104,8 +108,11 @@ div#footer{
 #login_container{
 	width: 600px;
 	margin: auto;
-	font-size: 24px;
+	font-size: 18px;
 }
 #login_container tr{
 	height: 40px;
+}
+#login_container input{
+	font-size: inherit;
 }
