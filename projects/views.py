@@ -85,10 +85,24 @@ class ProjectEditView(generic.edit.UpdateView):
         return reverse('projects:edit',
                 kwargs={'pk': self.kwargs.get('pk')})
 
+class ProjectCreateView(generic.edit.CreateView):
+    model = Project
+    template_name = 'projects/project_create.html'
+
+#    def get_object(self, queryset=None):
+#        """Custom get_object override for our Mongo collection."""
+#        return get_object_or_404(Project,
+#                project_id=self.kwargs.get('project_id'))
+
+    def get_success_url(self):
+        return reverse('projects:detail',
+                kwargs={'pk': self.request.POST['project_id']})
+                # TODO: Is this safe?
+
     # Make this view login-required.
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
-        return super(ProjectEditView, self).dispatch(*args, **kwargs)
+        return super(ProjectCreateView, self).dispatch(*args, **kwargs)
 
 class UserProfileView(generic.DetailView):
     model = UserProfile
