@@ -109,7 +109,7 @@ function bindSliders()
 		var zIndex = sliders.length - key;
 		$(value).css('z-index', zIndex);
 	});
-	$('.slider').unbind().click(function(){slideUp(this)});
+	$('.slider :not(.wordbox)').unbind().click(function(){slideUp(this)});
 
 	window.wheelMomentum = 0;
 	$(window).bind('mousewheel', function(event){
