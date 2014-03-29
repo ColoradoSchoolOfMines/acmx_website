@@ -1,0 +1,16 @@
+{% extends "projects/base.html" %}
+
+{% block title %}New Project | ACMx Labs{% endblock %}
+
+{% block content %}
+    <div id="page_content">
+        Create a new project!
+        <table>
+            <form action="{{ action }}" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Create"></input>
+            </form>
+        </table>
+    </div>
+{% endblock %}
