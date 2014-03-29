@@ -1,3 +1,4 @@
 Django project for the ACMx website.
 
-Getting started: https://docs.djangoproject.com/en/1.5/
+Getting started:
+http://django-mongodb-engine.readthedocs.org/en/latest/tutorial.html
