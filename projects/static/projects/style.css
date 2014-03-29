@@ -96,6 +96,11 @@ input#search:focus{
 	vertical-align: middle;
 }
 
+/* login page */
+#login_container{
+	margin: auto;
+}
+
 /* @media queries from here on out */
 @media (max-width: 945px){
 	#gigabot{
