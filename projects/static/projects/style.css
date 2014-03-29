@@ -99,6 +99,8 @@ input#search:focus{
 /* login page */
 #login_container{
 	margin: auto;
+	width: 600px;
+	text-align: center;
 }
 
 /* @media queries from here on out */
