@@ -102,5 +102,10 @@ div#footer{
 #login_container{
 	width: 600px;
 	margin: auto;
-	text-align: center;
+}
+#login_container tr{
+	height: 40px;
+}
+#login_container input[type="text"]{
+	height: 30px;
 }
