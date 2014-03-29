@@ -97,3 +97,10 @@ div#footer{
 	color: #333;
 	min-height: 200px;
 }
+
+/* login page styles */
+#login_container{
+	width: 600px;
+	margin: auto;
+	text-align: center;
+}
