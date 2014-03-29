@@ -1,27 +1,20 @@
 {% extends "projects/base.html" %}
 
 {% block content %}
-{% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %}
+    {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
 
-<div id="login_container">
-Enter your credentials for administrator access.
-<form method="post" action="{% url 'projects:login' %}">
-{% csrf_token %}
-<table>
-<tr>
-    <td>{{ form.username.label_tag }}</td>
-    <td>{{ form.username }}</td>
-</tr>
-<tr>
-    <td>{{ form.password.label_tag }}</td>
-    <td>{{ form.password }}</td>
-</tr>
-</table>
+    <div id="login_container">
+        Sign in
+        <form method="post" action="{% url 'projects:login' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
 
-<input type="submit" value="login" />
-<input type="hidden" name="next" value="{{ next }}" />
-</form>
-</div>
+            <input type="submit" value="login" />
+            <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+        <a href="">Register</a>
+        <!-- <a href="">Forgot your password?</a> -->
+    </div>
 {% endblock %}

@@ -64,7 +64,7 @@ input#search{
 }
 div.slider{
 	background-color: white;
-	background-image: url('/MilkyWayWallpaper.jpg');
+	background-image: url('/static/projects/MilkyWayWallpaper.jpg');
 	background-size: cover;
 	background-position: 50% 0;
 	padding: 20px 5% 20px 5%;
