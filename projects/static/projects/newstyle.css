@@ -30,6 +30,8 @@ img#logo{
 div#buttons{
 	float: right;
 	margin: 5px 30px 0 0;
+	text-decoration: none;
+	color: white;
 }
 div.button{
 	display: inline-block;
@@ -102,10 +104,8 @@ div#footer{
 #login_container{
 	width: 600px;
 	margin: auto;
+	font-size: 24px;
 }
 #login_container tr{
 	height: 40px;
-}
-#login_container input[type="text"]{
-	height: 30px;
 }
