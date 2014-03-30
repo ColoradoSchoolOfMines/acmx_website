@@ -2,19 +2,17 @@
 
 {% block content %}
     {% if form.errors %}
-        <p>Your username and password didn't match. Please try again.</p>
+        <p>Error!</p>
     {% endif %}
 
     <div id="login_container">
-        Sign in
+        Create an account
         <form method="post" action="{{ action }}">
             {% csrf_token %}
             {{ form.as_p }}
 
-            <input type="submit" value="Sign in" />
+            <input type="submit" value="Register" />
             <input type="hidden" name="next" value="{{ next }}" />
         </form>
-        <a href="{% url 'registration_register' %}">Register</a>
-        <a href="{% url 'auth_password_reset' %}">Forgot your password?</a>
     </div>
 {% endblock %}

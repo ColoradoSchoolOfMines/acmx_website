@@ -3,12 +3,6 @@ from projects import views
 
 urlpatterns = patterns('',
     url(r'^$', views.IndexView.as_view(), name='index'),
-#    # Django built-in authentication
-#    url(r'^login$', 'django.contrib.auth.views.login', {'template_name':
-#        'projects/login.html'}, name='login'),
-    # Authentication from django-registration
-    url(r'^accounts/', include('registration.backends.default.urls',
-            namespace="registration")),
     url(r'^about$', views.AboutView.as_view(), name='about'),
     url(r'^contact$', views.ContactView.as_view(), name='contact'),
     url(r'^support$', views.SupportView.as_view(), name='support'),
