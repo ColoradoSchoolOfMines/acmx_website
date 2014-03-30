@@ -22,6 +22,7 @@
             <div class="button"><a href="{% url 'projects:contact' %}">contact</a></div>
             <div class="button"><a href="{% url 'projects:support' %}">support us</a></div>
             {% if user.is_authenticated %}
+            <div class="button"><a href="{% url 'projects:create' %}">new project</a></div>
             <div class="button"><a href="{% url 'auth_logout' %}">sign out</a></div>
             {% else %}
             <div class="button"><a href="{% url 'auth_login' %}">sign in</a></div>
