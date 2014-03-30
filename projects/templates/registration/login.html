@@ -7,7 +7,7 @@
 
     <div id="login_container">
         Sign in
-        <form method="post" action="{% url 'projects:login' %}">
+        <form method="post" action="{% url 'projects:registration:auth_login' %}">
             {% csrf_token %}
             {{ form.as_p }}
 

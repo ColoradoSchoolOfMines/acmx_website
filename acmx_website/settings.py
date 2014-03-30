@@ -132,6 +132,8 @@ INSTALLED_APPS = (
     'djangotoolbox',
     'django_mongodb_engine',
     'permission_backend_nonrel',
+    # User registration
+    'registration',
     # ACMx stuff
     'projects'
 )
@@ -168,5 +170,6 @@ LOGGING = {
 }
 
 # Some settings specific to ACMxLabs
+ACCOUNT_ACTIVATION_DAYS = 7
 LOGIN_REDIRECT_URL='/'
 LOGIN_URL='/login'
