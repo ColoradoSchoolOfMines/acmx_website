@@ -4,9 +4,11 @@
 {% block title %}ACMx Labs{% endblock %}
 
 {% block content %}
-    <div id="spacer"></div>
     <div class="slider">
-        <div class="wordbox">
+      <div class="welcome">
+        <div class="container-fluid col-md-8 col-md-offset-2">
+          <div class="row">
+            <div class="col-md-7">
             <h1>Make something epic. Share it.</h1>
             <p>We are the Association for Computing Machinery group on
             campus at the Colorado School of Mines, but we've raised
@@ -21,7 +23,26 @@
             sharpen it. Our projects range from wireless mesh parking
             sensor networks, to remote tele-presence robots.
             <p>We are what we create. What else is there?
+            </div>
+            <div class="col-md-4 col-md-offset-1">
+              <form method-"post" action="/accounts/register">
+                <input type="text" class="form-control"
+                    placeholder="Pick a username"></input>
+                <input type="text" class="form-control"
+                    placeholder="Your email"></input>
+                <input type="text" class="form-control"
+                    placeholder="Create a password"></input>
+                <small>Use at least one number, one lowercase letter,
+                and eight characters.</small>
+                <button class="btn btn-default" type="submit">Sign up</button>
+                <small>By signing up, you are agreeing to our <a
+                href="">terms of service</a>. We may send occasional
+                emails related to your account.</small>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <script src="{% static 'projects/parallax.js' %}"></script>
 {% endblock %}

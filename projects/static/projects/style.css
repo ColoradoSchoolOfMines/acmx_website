@@ -1,122 +1,231 @@
-html,body{
-	margin: 0;
-	padding: 0;
-}
-html{
-	font-family: arial;
-	color: #ccc;
-}
 body{
-	background-color: #333;
-	margin: 0;
+	font-family: Open Sans, sans-serif;
+	background-color: #CCC;
+	//margin: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
-/* styles for basic building blocks */
-#gigabot{
-	position: absolute;
-	z-index: 99999;
-	margin-left: 360px;
-	margin-top: 0px;
+div#content {
+    margin-top: 55px;
 }
-#header{
+
+/* 
+ * Custom CSS for the global site header.
+ */
+
+.navbar {
 	background-color: #434343;
-	padding: 10px 1% 10px 1%;
-}
-#content{
-	background-color: #777;
-	margin: 0;
-	padding: 0 .5% 1% .5%;
-}
-#footer{
-	text-align: center;
-	color: #777;
-	background-color: #333;
-	padding: 10px;
-	float: none;
-	clear: both;
+	//height: 40px;
+	padding: 10px 10px 10px 10px;
+	//position: fixed;
+	//width: 100%;
+    //top: 0;
+	z-index: 999;
+    border-radius: 0;
 }
 
-/* styles for squares and their components */
-.square{
-	background-color: #555;
+img#logo{
+	height: 35px;
+}
+
+.btn-default {
+    //display: inline-block;
+	//padding: 5px 10px 5px 10px;
+    //border: 0px;
+	border-radius: 10px 10px 10px 0;
+	margin-right: 6px;
+    margin-left: 6px;
+	background-color: #408ED5 !important;
+	border-color: #408ED5 !important;
+	cursor: pointer;
+	color: #FFF !important;
+	text-decoration: inherit;
+}
+.btn-default:hover{
+	background-color: #65B4FA;
+	border-color: #65B4FA;
+}
+.btn-default:active{
+	background-color: #509EE5;
+	border-color: #509EE5;
+}
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+    border-radius: 0 10px 10px 0;
+}
+.navbar-inverse .navbar-nav > li > a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+	//margin-left: 6px;
+    color: #CCC;
+}
+
+.navbar-inverse .navbar-nav > li > a.btn {
+    color: #FFF;
+}
+.navbar-inverse .navbar-nav > li > a:hover.btn {
+	background-color: #65B4FA;
+	border-color: #65B4FA;
+}
+.navbar-inverse .navbar-toggle {
+    margin-top: 0;
+    margin-bottom: 0;
+	background-color: #408ED5;
+    border-color: #408ED5;
+}
+.navbar-inverse .navbar-toggle:hover {
+	background-color: #65B4FA;
+	border-color: #65B4FA;
+}
+.navbar-inverse .navbar-toggle:focus {
+	background-color: #509EE5;
+	border-color: #509EE5;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+.navbar-form {
+    margin: 0;
+    margin-left: 15px;
+}
+.tooltip-inner {
+    width: 70px;
+    font-size: 8pt;
+    background-color: #222;
+}
+.tooltip.bottom .tooltip-arrow, .tooltip.bottom-left .tooltip-arrow, .tooltip.bottom-right .tooltip-arrow {
+    border-bottom-color: #222;
+}
+
+/* Header search box */
+.form-search .search-query:first-child {
+    //width: 100px;
+    width: 165px;
+	//font-size: inherit;
+	//line-height: 26px;
+	//padding: 3px 6px 0px 6px;
+    //border: solid 1px #fff;
+	border-radius: 10px 0px 0px 0;
+    //padding: 5px;
+	/* Don't user CSS transition, make this jquery based */
+}
+.input-group-addon, .input-group-btn {
+    width: auto;
+}
+
+
+/*
+ * Custom CSS for the homepage.
+ */
+
+div.welcome {
 	display: inline-block;
-	margin: 0;
-	width: 24%;
-	margin-left: .5%;
-	margin-right: .5%;
-	margin-top: 1%;
-	margin-bottom: 0;
+    width: 100%;
+    padding-top: 75px;
+    padding-bottom: 75px;
+	background-color: rgba(0,0,0,0.5);
+	text-align: left;
+	color: white;
+    font-size: 12pt;
 }
 
-/* menu styles */
-#menu_container{
-	float: right;
+div.welcome h1 {
+    margin-top: 0;
+}
+
+div.welcome .form-control {
+    margin-bottom: 10px;
+	border-radius: 10px 10px 10px 0;
+    height: 40px;
+}
+
+div.welcome small {
+    color: #CCC;
+}
+
+div.welcome .btn {
+    width: 100%;
+    height: 40px;
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+	border-radius: 10px 10px 10px 10px;
+    background-color: #CCC;
+    border-color: #CCC;
+    color: #000;
+}
+
+div.welcome .btn-default {
+    width: 100%;
+    height: 40px;
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+	border-radius: 10px 0px 10px 10px;
+}
+
+
+/*
+ * Custom CSS for other pages.
+ */
+
+div.slider{
+	background-color: white;
+	background-image: url('/static/projects/MilkyWayWallpaper.jpg');
+	background-size: cover;
+	//background-position: 50% 0;
+	//padding: 20px 5% 20px 5%;
+	//position: absolute;
+}
+div.wordbox{
+	display: inline-block;
+    max-width: 40%;
+	min-width: 420px;
+	padding: 10px;
+	background-color: rgba(0,0,0,0.6);
+	text-align: left;
+	color: white;
+}
+/*
+div#welcome h1{
+	font-size: 36px;
+}
+h1{
+	font-size: 24px;
+	font-weight: bold;
+	margin: 4px 0 4px 0;
+}
+*/
+.project_intro{
+	height: 100px;
+	background-size: cover;
+	padding: 20px 5% 20px 5%;
+}
+.project_details{
+	padding: 20px 5% 20px 5%;
+	background-color: white;
+}
+div#footer{
+	background-color: #CCC;
+	text-align: center;
+	padding: 10px;
+	color: #333;
+	min-height: 200px;
+}
+
+/* login page styles */
+#login_container{
+	width: 600px;
+	margin: auto;
 	font-size: 18px;
 }
-#menu_container a{
-	color: inherit;
-	text-decoration: none;
+#login_container tr{
+	height: 40px;
 }
-#menu_container div.button:first-child{
-	border-radius: 14px 0px 0px 14px;
-	padding-left: 12px;
-}
-#menu_container div.button:last-child{
-	border-radius: 0px 14px 14px 0px;
-	padding-right: 4px;
-}
-.menu_element{
-	display: inline-block;
-	margin: 1px !important;
-	padding: 8px 8px 8px 8px;
-}
-.button{
-	cursor: pointer;
-	background-color: #666;
-}
-.button:hover{
-	background-color: #777;
-}
-input#search{
-	background-color: #666;
-	border: none;
-	outline: none;
-	font-family: inherit;
-	color: inherit;
+#login_container input{
 	font-size: inherit;
-	margin: 0;
-}
-input#search:focus{
-	transition: .3s;
-	box-shadow: 0px 0px 2px 1px white;
-	background-color: #777;
-}
-#search_button{
-	padding: 1px 0px 1px 0px;
-	vertical-align: middle;
-}
-
-/* login page */
-#login_container{
-	margin: auto;
-	width: 600px;
-	text-align: center;
-}
-
-/* @media queries from here on out */
-@media (max-width: 945px){
-	#gigabot{
-		display: none;
-	}
-}
-@media (max-width: 845px){
-
-}
-@media (max-width: 620px){
-	#menu_container{
-		
-	}
-	#header{
-		text-align: center;
-	}
 }
