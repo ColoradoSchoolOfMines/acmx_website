@@ -1,15 +1,54 @@
 {% extends "projects/base.html" %}
 
-{% block title %}Projects | ACMx Labs{% endblock %}
+{% block title %}Projects{% endblock %}
 
 {% block content %}
-    <div id="project_list">
-        {% for project in project_list %}
-            <!-- Link to custom project pages. Use AJAX stuff to avoid
-                 having to define more urls in Django -->
-            <a href="{% url 'projects:detail' project.project_id %}">{{ project }}</a>
-            <a href="{% url 'projects:edit' project.project_id %}">[EDIT]</a>
-            <br>
-        {% endfor %}
+    <div class="container-fluid col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+      <div class="row">
+        <div class="input-group project-filter">
+          <div class="input-group-btn">
+            <button class="btn dropdown-toggle" data-toggle="dropdown" type="button">
+              Sort <span class="caret"></span>
+            </button>
+          <ul class="dropdown-menu project-sort" role="menu">
+            <li class="sort" data-sort="epoch:desc">Newest first</li>
+            <li class="sort" data-sort="epoch:asc">Oldest first</li>
+            <li class="sort" data-sort="name:asc">Name (ascending)</li>
+            <li class="sort" data-sort="name:desc">Name (descending)</li>
+          </ul>
+        </div>
+          <input type="text" class="form-control" id="filter" placeholder="Search" />
+        </div>
+      </div>
+      <div class="row" id="projects">
+      {% for project in project_list %}
+      <a href="{% url 'projects:detail' project.project_id %}" class="mix thumbnail" 
+         data-epoch="{{ project.epoch }}" data-name="{{ project.title.lower }}"
+         data-header="{{ project }}" data-desc="{{ project.description }}">
+        <img src="http://placekitten.com/320/200">
+        <div class="caption text-center">
+          <h2>{{ project }}</h2><p>{{ project.description }}</p>
+        </div>
+      </a>
+      {% endfor %}
+      <div class="spacer"></div>
     </div>
+    <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+    <script>
+      $(function(){
+        // Instantiate MixItUp:
+        $container = $('#projects')
+        $container.mixItUp();
+        $update = function(){
+          var val = $(this).val().toLowerCase();
+          var state = $container.mixItUp('getState');
+          var $filtered = state.$targets.filter(function(index, element){
+            return $(this).text().toString().toLowerCase().indexOf( val.trim() ) >= 0;
+          });
+            
+          $container.mixItUp('filter', $filtered);
+        };
+        $('#filter').keyup($update);
+      });
+    </script>
 {% endblock %}

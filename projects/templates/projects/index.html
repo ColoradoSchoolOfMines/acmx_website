@@ -4,9 +4,11 @@
 {% block title %}ACMx Labs{% endblock %}
 
 {% block content %}
+    {% if user.is_authenticated %}
+    {% else %}
     <div class="slider">
       <div class="welcome">
-        <div class="container-fluid col-md-8 col-md-offset-2">
+        <div class="container-fluid col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
           <div class="row">
             <div class="col-md-7">
             <h1>Make something epic. Share it.</h1>
@@ -25,13 +27,13 @@
             <p>We are what we create. What else is there?
             </div>
             <div class="col-md-4 col-md-offset-1">
-              <form method-"post" action="/accounts/register">
+              <form method="post" action="/accounts/register">
                 <input type="text" class="form-control"
-                    placeholder="Pick a username"></input>
+                    placeholder="Pick a username" />
                 <input type="text" class="form-control"
-                    placeholder="Your email"></input>
+                    placeholder="Your email" />
                 <input type="text" class="form-control"
-                    placeholder="Create a password"></input>
+                    placeholder="Create a password" />
                 <small>Use at least one number, one lowercase letter,
                 and eight characters.</small>
                 <button class="btn btn-default" type="submit">Sign up</button>
@@ -44,5 +46,6 @@
         </div>
       </div>
     </div>
-    <script src="{% static 'projects/parallax.js' %}"></script>
+    {% endif %}
+    <!--<script src="{% static 'projects/parallax.js' %}"></script>-->
 {% endblock %}
