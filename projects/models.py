@@ -56,6 +56,9 @@ class Project(models.Model):
     def epoch(self):
         return int(self.pub_date.strftime("%s"))
 
+    def short_desc(self):
+        return self.description if len(self.description) <= 38 else ' '.join(self.description[:38].split(' ')[:-1]) + '...'
+
     was_published_recently.admin_order_field = 'pub_date'
     was_published_recently.boolean = True
     was_published_recently.short_description = 'Published recently?'
