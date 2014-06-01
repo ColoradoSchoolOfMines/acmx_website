@@ -1,28 +1,40 @@
 {% extends "projects/base.html" %}
 {% load staticfiles %}
 
-{% block title %}{{ project.title }} | ACMx Labs{% endblock %}
+{% block title %}{{ project.title }}{% endblock %}
 
 {% block content %}
-    <nav>
-        {% for page in project.pages %}
-            <!-- Link to custom project pages. Use AJAX stuff to avoid
-                 having to define more urls in Django -->
-            <a href="">{{ page }}</a>
-        {% endfor %}
-    </nav>
+    <div class="container-fluid col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+      <div class="panel panel-default project-content">
+        <div class="panel-heading">
+          <h1>{{ project.title }}</h1>
+          <h4>{{ project.description }}</h4>
+        </div>
+        <div class="tabbable tabs-left clearfix">
+          <ul id="pageTabs" class="nav nav-tabs">
+            <li class="active">
+              <a data-toggle="tab" href="#description">Description</a>
+            </li>
+          {% for id, page in project.other_pages.iteritems %}
+            <li class="">
+              <a data-toggle="tab" href="#{{ id }}">{{ page.0 }}</a>
+            </li>
+          {% endfor %}
+          </ul>
 
-    <div class="project_intro" 
-         style="background-image: url('{% static 'projects/MilkyWayWallpaper.jpg' %}')">
-        <div class="wordbox">
-            <h1>{{ project.title }}</h1>
-            <!-- TODO: Replace this with the ajaxy pages[page] stuff. -->
+          <div id="pageTabsContent" class="tab-content">
+            <div id="description" class="tab-pane fade active in">
+              <h1>Description</h1>
+              {{ project.pages.Description }}
+            </div>
+          {% for id, page in project.other_pages.iteritems %}
+            <div id="{{ id }}" class="tab-pane fade">
+              <h1>{{ page.0 }}</h1>
+              {{ page.1|safe }}
+            </div>
+          {% endfor %}
+          </div>
         </div>
-    </div>
-    <div class="content_container">
-        <div class="project_details">
-            <h1>About this project</h1>
-            {{ project.description }}
-        </div>
+      </div>
     </div>
 {% endblock %}

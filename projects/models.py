@@ -1,8 +1,10 @@
 import datetime
+from markdown import markdown
 from django.db import models
 from django.contrib.auth.models import User
 from djangotoolbox import fields
 from django.utils import timezone
+from django.utils.text import slugify
 import forms
 
 class GenericListField(fields.ListField):
@@ -37,7 +39,7 @@ class UserProfile(models.Model):
         return self.user.username
 
 class Project(models.Model):
-    project_id = models.CharField(max_length=50)
+    project_id = models.SlugField(max_length=50)
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published', auto_now=True,
@@ -58,6 +60,12 @@ class Project(models.Model):
 
     def short_desc(self):
         return self.description if len(self.description) <= 38 else ' '.join(self.description[:38].split(' ')[:-1]) + '...'
+
+    def html_pages(self):
+        return { k: markdown(v, safe_mode='escape') for k, v in self.pages.iteritems() }
+
+    def other_pages(self):
+        return { slugify(k): (k, v) for k, v in self.html_pages().iteritems() if k != 'Description' }
 
     was_published_recently.admin_order_field = 'pub_date'
     was_published_recently.boolean = True
