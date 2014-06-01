@@ -435,6 +435,9 @@ div.project-content .panel-heading  h1{
     body {
         margin-bottom: 0;
     }
+    div.spacer {
+        height: 0px;
+    }
     .form-search .search-query:first-child {
         width: 165px;
     }
