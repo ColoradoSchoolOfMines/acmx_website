@@ -385,6 +385,18 @@ div.project-content {
     margin-top: 15px;
     padding-top: 0;
     width: 100%;
+	border-radius: 10px 10px 10px 0;
+}
+div.project-content .panel-heading {
+	border-radius: 10px 10px 0px 0;
+}
+div.project-content .tabs-left .nav-tabs a {
+    color: #434343 !important;
+}
+div.project-content .tabs-left .nav-tabs > li:first-child > a,
+div.project-content .tabs-left .nav-tabs > li:last-child > a,
+div.project-content .tabs-left .nav-tabs {
+    border-radius: 0;
 }
 div.project-content .tab-content {
     display: inline-block;
