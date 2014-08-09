@@ -1,2 +1,6 @@
 *.py[cdo]
+build/
+dist/
+*.egg-info/
 run*.sh
+secrets.py
