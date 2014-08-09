@@ -1,4 +1,0 @@
-To complete your registration for ACMxLabs.org, use the following link:
-http://acmxlabs.org{% url 'registration_activate' activation_key %}
-
-The link will expire in {{ expiration_days }} days.
