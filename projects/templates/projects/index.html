@@ -1,0 +1,52 @@
+{% extends "projects/base.html" %}
+{% load staticfiles %}
+
+{% block title %}ACMx Labs{% endblock %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+    {% else %}
+    <div class="slider">
+      <div class="welcome">
+        <div class="container-fluid col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+          <div class="row">
+            <div class="col-md-7">
+            <h1>Make something epic. Share it.</h1>
+            <p>We are the Association for Computing Machinery group on
+            campus at the Colorado School of Mines, but we've raised
+            our pirate flag and gone adrift.
+            <p>We are a group of creators with a heavy focus on
+            real-life projects that are relevant to both students and
+            industry alike. We work with all disciplines, with members
+            from electrical, petroleum, physics, and computer
+            engineering.
+            <p>We do elementary outreach to increase interest in our
+            craft, as well as regularly compete in code competitions to
+            sharpen it. Our projects range from wireless mesh parking
+            sensor networks, to remote tele-presence robots.
+            <p>We are what we create. What else is there?
+            </div>
+            <div class="col-md-4 col-md-offset-1">
+              <form method="" action="">
+                {% csrf_token %}
+                <input type="text" class="form-control" name="username"
+                    placeholder="Pick a username" />
+                <input type="text" class="form-control" name="email"
+                    placeholder="Your email" />
+                <input type="text" class="form-control" name="password"
+                    placeholder="Create a password" />
+                <small>Use at least one number, one lowercase letter,
+                and eight characters.</small>
+                <button class="btn btn-default" type="submit">Sign up</button>
+                <small>By signing up, you are agreeing to our <a
+                href="">terms of service</a>. We may send occasional
+                emails related to your account.</small>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    <!--<script src="{% static 'projects/parallax.js' %}"></script>-->
+{% endblock %}

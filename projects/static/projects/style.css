@@ -1,0 +1,444 @@
+body{
+	font-family: Open Sans, sans-serif;
+	background-color: #CCC;
+	//margin: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+    /* Margin bottom by footer height */
+    margin-bottom: 65px;
+}
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+a {
+	color: #408ED5 !important;
+}
+a:hover {
+    color: #65B4FA !important;
+}
+div#content {
+    margin-top: 55px;
+}
+div.spacer {
+    height: 100px;
+    position:relative;
+}
+
+/* 
+ * Custom CSS for the global site header and footer.
+ */
+
+.navbar {
+	background-color: #434343;
+	padding: 10px 10px 10px 10px;
+	z-index: 999;
+    border-radius: 0;
+    height: 56px;
+}
+
+img#logo{
+	height: 35px;
+}
+
+.btn-default {
+	border-radius: 10px 10px 10px 0;
+	margin-right: 6px;
+    margin-left: 6px;
+	background-color: #408ED5 !important;
+	border-color: #408ED5 !important;
+	cursor: pointer;
+	color: #FFF !important;
+	text-decoration: inherit;
+}
+.btn-default:hover{
+	background-color: #65B4FA !important;
+	border-color: #65B4FA !important;
+    color: #FFF !important;
+}
+.btn-default:active{
+	background-color: #509EE5;
+	border-color: #509EE5;
+}
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+    border-radius: 0 10px 10px 0;
+}
+.navbar-inverse .navbar-nav > li > a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+	//margin-left: 6px;
+    color: #CCC !important;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #EEE !important;
+}
+
+.navbar-inverse .navbar-nav > li > a.btn {
+    color: #FFF !important;
+}
+.navbar-inverse .navbar-nav > li > a:hover.btn {
+	background-color: #65B4FA;
+	border-color: #65B4FA;
+}
+.navbar-inverse .navbar-toggle {
+    margin-top: 0;
+    margin-bottom: 0;
+	background-color: #408ED5;
+    border-color: #408ED5;
+}
+.navbar-inverse .navbar-toggle:hover {
+	background-color: #65B4FA;
+	border-color: #65B4FA;
+}
+.navbar-inverse .navbar-toggle:focus {
+	background-color: #509EE5;
+	border-color: #509EE5;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+.navbar-form {
+    margin: 0;
+    margin-left: 15px;
+}
+.navbar-inverse .navbar-collapse {
+    background-color: #434343;
+    border-top: none;
+    box-shadow: none;
+}
+.tooltip-inner {
+    width: 70px;
+    font-size: 8pt;
+    background-color: #222;
+}
+.tooltip.bottom .tooltip-arrow, .tooltip.bottom-left .tooltip-arrow, .tooltip.bottom-right .tooltip-arrow {
+    border-bottom-color: #222;
+}
+
+/* Header search box */
+.form-search .search-query:first-child {
+    width: 200px;
+	border-radius: 10px 0px 0px 0;
+}
+.input-group-addon, .input-group-btn {
+    width: auto;
+}
+
+/* Footer */
+.col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+div.footer{
+	background-color: #434343;
+	text-align: left;
+    color: #CCC;
+    padding: 0px;
+	height: 65px;
+    width: 100%;
+    margin-top: -65px;
+    position: absolute;
+    bottom: 0;
+}
+div.footer a {
+    color: #CCC !important;
+}
+div.footer a:hover {
+    color: #EEE !important;
+}
+div.footer img {
+    height: 32px;
+    margin-right: 10px;
+}
+div.footer a.logo {
+    font-size: 14pt;
+}
+div.footer a.footer-link {
+    font-size: 11pt;
+    margin-left: 15px;
+}
+div.footer .row {
+    margin: 15px;
+}
+div.footer .copyright {
+    text-align: right;
+    float: right;
+    font-size: 8pt;
+    line-height: 32px;
+}
+
+
+/*
+ * Custom CSS for the homepage.
+ */
+
+div.welcome {
+	display: inline-block;
+    width: 100%;
+    padding-top: 75px;
+    padding-bottom: 75px;
+	background-color: rgba(0,0,0,0.5);
+	text-align: left;
+	color: white;
+    font-size: 12pt;
+}
+
+div.welcome h1 {
+    margin-top: 0;
+}
+
+div.welcome .form-control {
+    margin-bottom: 10px;
+	border-radius: 10px 10px 10px 0;
+    height: 40px;
+}
+
+div.welcome small {
+    color: #CCC;
+}
+
+div.welcome .btn {
+    width: 100%;
+    height: 40px;
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+	border-radius: 10px 10px 10px 10px;
+    background-color: #CCC;
+    border-color: #CCC;
+    color: #000;
+}
+
+div.welcome .btn-default {
+    width: 100%;
+    height: 40px;
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+	border-radius: 10px 0px 10px 10px;
+}
+
+
+/*
+ * Custom CSS for other pages.
+ */
+
+.form-control {
+    margin-bottom: 10px;
+	border-radius: 10px 10px 10px 0;
+}
+.btn-up {
+	border-radius: 10px 0px 10px 10px;
+}
+
+.btn-login {
+    width: 100% !important;
+    margin-left: 0 !important;
+	border-radius: 0px 10px 10px 10px;
+}
+.login {
+    padding-left: 0;
+    padding-right: 0;
+    vertical-align: middle;
+    height: 40px;
+}
+.float-right {
+    float: right;
+    padding-left: 15px;
+}
+
+.alert {
+    margin-top: 15px;
+}
+.alert-danger {
+    background-color: #dc9596;
+    color: #b9292c;
+}
+.has-error .control-label {
+    color: #b9292c;
+}
+.has-error .form-control {
+    border-color: #b9292c;
+}
+
+
+div.slider{
+	background-color: white;
+	background-image: url('/static/projects/MilkyWayWallpaper.jpg');
+	background-size: cover;
+	//background-position: 50% 0;
+	//padding: 20px 5% 20px 5%;
+	//position: absolute;
+}
+div.wordbox{
+	display: inline-block;
+    max-width: 40%;
+	min-width: 420px;
+	padding: 10px;
+	background-color: rgba(0,0,0,0.6);
+	text-align: left;
+	color: white;
+}
+
+/*
+ * Project list page.
+ */
+.project-filter {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.project-filter button {
+    background-color: #434343;
+	border-radius: 10px 10px 10px 0;
+    border-color: transparent;
+}
+.project-filter button:hover {
+    background-color: #282828;
+}
+.project-filter button:focus {
+    background-color: #282828;
+}
+.project-filter .form-control {
+    width: 100%;
+}
+.project-filter ul {
+    background-color: #434343;
+    padding-top: 10px;
+    padding-bottom: 10px;
+	border-radius: 10px 10px 10px 0;
+}
+.project-filter .input-group-btn {
+    width: 1%;
+}
+li.sort {
+    background-color: #434343;
+    color: #CCC;
+    line-height: 150%;
+    padding: 10px;
+}
+li.sort:hover {
+    background-color: #282828;
+    color: #CCC;
+    line-height: 150%;
+}
+#projects {
+  text-align: justify;
+  font-size: 0.1px;
+  
+  -webkit-backface-visibility: hidden;
+}
+#projects:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+.mix {
+    background-color: #434343;
+    height: 290px;
+    display: none;
+    color: #CCC !important;
+    border-radius: 10px 10px 10px 0;
+    width: 24%;
+    margin: 0.4%;
+    //padding: 15px;
+    text-align: left;
+    margin-bottom: 1%;
+    overflow: hidden;
+}
+.mix:hover {
+    background-color: #282828;
+}
+.mix:after{
+  //content: attr(data-name);
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 4% 6%;
+  font-weight: 700;
+}
+.mix:before{
+//  content: '';
+  display: inline-block;
+  padding-top: 60%;
+}
+.mix h2 {
+    font-size: 14pt;
+    margin-top: 0;
+    color: #CCC;
+}
+.mix p {
+    font-size: 12pt;
+    color: #CCC;
+}
+.mix img {
+    border-radius: 8px 8px 0 0;
+}
+
+/* Project pages */
+div.project-content {
+    margin-top: 15px;
+    padding-top: 0;
+    width: 100%;
+	border-radius: 10px 10px 10px 0;
+}
+div.project-content .panel-heading {
+	border-radius: 10px 10px 0px 0;
+}
+div.project-content .tabs-left .nav-tabs a {
+    color: #434343 !important;
+}
+div.project-content .tabs-left .nav-tabs > li:first-child > a,
+div.project-content .tabs-left .nav-tabs > li:last-child > a,
+div.project-content .tabs-left .nav-tabs {
+    border-radius: 0;
+}
+div.project-content .tab-content {
+    display: inline-block;
+    padding: 25px;
+    padding-top: 0;
+    width: 75%;
+}
+div.project-content .panel-heading {
+    padding-left: 40px;
+}
+
+div.project-content .panel-heading  h1{
+    margin-top: 20px;
+}
+
+/* login page styles */
+.login-container{
+	//width: 600px;
+	margin: auto;
+	//font-size: 18px;
+}
+.login-container input {
+}
+
+/* 
+ * Custom @media directives.
+ */
+
+@media (max-width: 991px){
+    .float-right {
+        float: none;
+    }
+    .footer {
+        display: none;
+    }
+    body {
+        margin-bottom: 0;
+    }
+    div.spacer {
+        height: 0px;
+    }
+    .form-search .search-query:first-child {
+        width: 165px;
+    }
+}

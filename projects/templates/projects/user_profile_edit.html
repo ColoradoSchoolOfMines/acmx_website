@@ -1,0 +1,14 @@
+{% extends "projects/base.html" %}
+
+{% block title %}Edit Profile: {{ userprofile.username }} | ACMx Labs{% endblock %}
+
+{% block content %}
+    <div id="page_content">
+        This is {{ userprofile.username }}'s profile.
+        <table><form action="{{ action }}" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Save"></input>
+        </form></table>
+    </div>
+{% endblock %}
