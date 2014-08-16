@@ -39,6 +39,18 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.request',
+    'allauth.account.context_processors.account',
+    'allauth.socialaccount.context_processors.socialaccount',
+)
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,6 +58,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Needed for allauth.
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
     'projects',
 )
 
@@ -86,6 +104,10 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# Django sites framework (required by allauth).
+
+SITE_ID = 1
 
 
 # Static files (CSS, JavaScript, Images)
