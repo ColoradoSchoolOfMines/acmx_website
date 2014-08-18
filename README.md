@@ -18,18 +18,31 @@ steps you'll have to complete.
    on your computer. If you're using Windows, try [GitHub for
    Windows](https://windows.github.com/); Mac users try [GitHub for
    Mac](https://mac.github.com/).
-3. While it is possible to install Python and Django on Windows or Mac, I
+3. Read the rest of this README.
 
 
-### Working from a development server
+### Working from a Windows or Mac computer
 
-(Or a personal Linux computer.)
+If you have a Windows or Mac machine, you will probably want to work from a
+local clone, then deploy to a test server to see your changes. To get
+started, clone the acmw_website repo through the GitHub program, or from the
+command-line with `git clone https://github.com/ColoradoSchoolOfMines/acmx_website.git`.
+
+[Let me know](mailto:rshipp@mines.edu) that you're working from a Windows or Mac and
+need a test server, and I'll help you get set up with one.
+
+Make whatever changes you want (see [using git](#using-git) for an example
+workflow, or use the GitHub program to manage your changes). Before pushing
+to GitHub, deploy to the test server with `fab deploy` and make sure
+everything works.
+
+### Working from a development server (or a Linux computer)
 
 #### Initial setup
 
 If you have a Linux machine you can use as a dev server, awesome. If you
 don't, but you want to try working on a server, just [let me
-know](rshipp@mines.edu) and I'll get you set up with remote SSH access on one
+know](mailto:rshipp@mines.edu) and I'll get you set up with remote SSH access on one
 of mine. The instructions below assume you're working on a Debian-based
 server (like Ubuntu).
 
@@ -85,18 +98,10 @@ virtualenv, with:
 Then change to the website directory (`cd acmx_website`), make sure you have
 the latest code (`git pull`), and start hacking.
 
-### Working from your personal computer
-
-If you have a Windows or Mac machine, it's a bit more difficult to get Django
-set up. You can try, and feel free to ask for help if you get stuck, but I'd
-recommend using a [development server](#working-from-a-development-server)
-instead. It will be way easier to set up, and you'll get some invaluable
-experience working with Linux.
-
 ### Using Git
 
 Git is an awesome tool for collaborative development, but it takes some
-getting used to if you've never used it before. GitHub has a great [online
+getting used to if you've never seen it before. GitHub has a great [online
 tutorial](https://try.github.io/) for getting started with git, that will
 only take a few minutes.
 
