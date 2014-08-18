@@ -51,10 +51,12 @@ Be sure to [set up git](https://help.github.com/articles/set-up-git).
 Next, set up a virtualenv and grab everything you'll need to work on the
 website:
 
-    mkvirtualenv acmx
-    git clone https://github.com/ColoradoSchoolOfMines/acmx_website.git
-    cd acmx_website
-    sudo pip install -r requirements.txt
+```bash
+mkvirtualenv acmx
+git clone https://github.com/ColoradoSchoolOfMines/acmx_website.git
+cd acmx_website
+sudo pip install -r requirements.txt
+```
 
 There are a few secret settings that we can't store on GitHub, so you'll have
 to ask for a copy of those before you can go any farther.
@@ -62,8 +64,10 @@ to ask for a copy of those before you can go any farther.
 Once you have all the secret stuff, apply the database migrations and start
 up the Django development server with:
 
-    ./manage.py syncdb
-    ./manage.py runserver
+```bash
+./manage.py syncdb
+./manage.py runserver
+```
 
 When you're working on a remote server like this, you won't be able to use any
 IDE or fancy graphical text editor. I highly recommend you learn how to use
