@@ -37,6 +37,11 @@ workflow, or use the GitHub program to manage your changes). Before pushing
 to GitHub, deploy to the test server with `fab deploy` and make sure
 everything works.
 
+If you want to try installing Django locally instead of deploying to a test
+server, [this
+page](http://chimera.labs.oreilly.com/books/1234000000754/pr02.html) from the
+*Test Driven Development with Python* book might be helpful.
+
 ### Working from a development server (or a Linux computer) <a name="linux"></a>
 
 #### Initial setup
