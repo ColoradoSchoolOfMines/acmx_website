@@ -20,8 +20,7 @@ steps you'll have to complete.
    Mac](https://mac.github.com/).
 3. Windows and Mac users, read [this](#windows-mac); Linux users, read
    [this](#linux).
-4. Learn how to use [git](#using-git).
-5. Learn how to work with [Django](#working-with-django).
+4. Learn how to use [git](#using-git) and [Django](#working-with-django).
 
 ### Working from a Windows or Mac computer <a name="windows-mac"></a>
 
@@ -145,3 +144,29 @@ while you were making yours. Pull again, fix any merge conflicts, and push:
     git push
 
 ### Working with Django
+
+For a more in-depth guide to Django, go read [the official
+tutorial](https://docs.djangoproject.com/en/1.7/intro/tutorial01/) and the
+[Test Driven Development with Python](http://chimera.labs.oreilly.com/books/1234000000754/)
+book. Here's a quick start guide:
+
+#### Backend logic
+
+Since Django is a Python framework, all the logic for the site is written in
+Python. The models, which describe the database layout, are in
+[projects/models.py](projects/models.py). The views, which tell Django how to
+display different pages on the site, are in [projects/views.py](projects/views.py).
+These are the files backend developers will work with most.
+
+If you change the models, you'll need to create a "migration" for your
+changes. In Django 1.7, this is as easy as running `./manage.py makemigrations`.
+Windows and Mac users won't be able to do this without having Django
+installed, so either do it on a Linux server, or ask for help from someone
+running Linux.
+
+#### Frontend
+
+Django uses its own template language, mixed with HTML, to render site pages.
+All of these are in [projects/templates/](projects/templates/). Static files,
+like images, CSS and JavaScript, are stored in
+[projects/static/](projects/static/).
