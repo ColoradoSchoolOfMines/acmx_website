@@ -35,7 +35,7 @@ server (like Ubuntu).
 
 First, install and configure the tools you'll be using:
 
-```language=shell
+```shell
 sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install python-dev git build-essential python-pip
 sudo pip install virtualenvwrapper
