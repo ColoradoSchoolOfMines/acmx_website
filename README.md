@@ -35,14 +35,16 @@ server (like Ubuntu).
 
 First, install and configure the tools you'll be using:
 
-    sudo apt-get update && sudo apt-get upgrade
-    sudo apt-get install python-dev git build-essential python-pip
-    sudo pip install virtualenvwrapper
-    cat << EOF >> ~/.bashrc
+```language=shell
+sudo apt-get update && sudo apt-get upgrade
+sudo apt-get install python-dev git build-essential python-pip
+sudo pip install virtualenvwrapper
+cat << EOF >> ~/.bashrc
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 EOF
-    source ~/.bashrc
+source ~/.bashrc
+```
 
 Be sure to [set up git](https://help.github.com/articles/set-up-git).
 
