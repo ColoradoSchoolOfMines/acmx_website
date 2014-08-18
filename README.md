@@ -18,10 +18,12 @@ steps you'll have to complete.
    on your computer. If you're using Windows, try [GitHub for
    Windows](https://windows.github.com/); Mac users try [GitHub for
    Mac](https://mac.github.com/).
-3. Read the rest of this README.
+3. Windows and Mac users, read [this](#windows-mac); Linux users, read
+   [this](#linux).
+4. Learn how to use [git](#using-git).
+5. Learn how to work with [Django](#working-with-django).
 
-
-### Working from a Windows or Mac computer
+### Working from a Windows or Mac computer <a name="windows-mac"></a>
 
 If you have a Windows or Mac machine, you will probably want to work from a
 local clone, then deploy to a test server to see your changes. To get
@@ -36,7 +38,7 @@ workflow, or use the GitHub program to manage your changes). Before pushing
 to GitHub, deploy to the test server with `fab deploy` and make sure
 everything works.
 
-### Working from a development server (or a Linux computer)
+### Working from a development server (or a Linux computer) <a name="linux"></a>
 
 #### Initial setup
 
@@ -142,4 +144,4 @@ while you were making yours. Pull again, fix any merge conflicts, and push:
     git pull
     git push
 
-
+### Working with Django
