@@ -112,16 +112,10 @@ Pull in the latest code from GitHub:
 
     git pull
 
-Work on whatever new feature or bugfix you're adding. When you're done, make
-sure the tests still pass:
-
-    ./manage.py test
-
-If there are any failures, stop and find out what broke, and fix it. Then
+Work on whatever new feature or bugfix you're adding. When you're done,
 add your changes:
 
     git add -p
-
 
 The `-p` option brings up interactive add; press `y` if the changes look
 correct, or `n` if they don't and you want to go back and fix something. You
@@ -148,7 +142,7 @@ while you were making yours. Pull again, fix any merge conflicts, and push:
 For a more in-depth guide to Django, go read [the official
 tutorial](https://docs.djangoproject.com/en/1.7/intro/tutorial01/) and the
 [Test Driven Development with Python](http://chimera.labs.oreilly.com/books/1234000000754/)
-book. Here's a quick start guide:
+book. If you don't have time for that, here are the most important bits:
 
 #### Backend logic
 
