@@ -74,7 +74,7 @@ website:
 mkvirtualenv acmx
 git clone https://github.com/ColoradoSchoolOfMines/acmx_website.git
 cd acmx_website
-sudo pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 There are a few secret settings that we can't store on GitHub, so you'll have
