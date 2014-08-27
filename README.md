@@ -1,6 +1,9 @@
 ACMxLabs.org
 ============
 
+[![Build Status](https://travis-ci.org/ColoradoSchoolOfMines/acmx_website.svg?branch=master)](https://travis-ci.org/ColoradoSchoolOfMines/acmx_website)
+[![Code Health](https://landscape.io/github/ColoradoSchoolOfMines/acmx_website/master/landscape.png)](https://landscape.io/github/ColoradoSchoolOfMines/acmx_website/master)
+
 This is a complete rewrite of the ACMx Labs website in Django 1.7. If you
 want to work on it, please read through the information below, then dive in!
 If you get stuck at any point, don't hesitate to contact us and ask
