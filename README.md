@@ -3,6 +3,8 @@ ACMxLabs.org
 
 This is a complete rewrite of the ACMx Labs website in Django 1.7. If you
 want to work on it, please read through the information below, then dive in!
+If you get stuck at any point, don't hesitate to contact us and ask
+questions!
 
 ## How to Contribute
 
