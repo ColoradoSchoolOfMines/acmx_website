@@ -1,10 +1,8 @@
 ACMxLabs.org
 ============
 
-This is a complete rewrite of the ACMx Labs website in Django 1.7. It should
-be up to the same point as the original Django-nonrel app by the first ACMx
-meeting of the Fall '14 semester. If you want to work on it, you should
-probably wait until then.
+This is a complete rewrite of the ACMx Labs website in Django 1.7. If you
+want to work on it, please read through the information below, then dive in!
 
 ## How to Contribute
 
