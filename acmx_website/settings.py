@@ -114,3 +114,7 @@ SITE_ID = 1
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Custom
+LOGIN_URL = '/accounts/google/login/'
