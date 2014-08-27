@@ -49,10 +49,10 @@
           {% if user.is_authenticated %}
             <li><a href="{% url 'projects:create' %}" data-placement="bottom" data-toggle="tooltip" type="button" data-original-title="new project">
                 <i class="glyphicon glyphicon-plus"></i></a></li>
-            <li><a href="% url 'auth_logout' %}" data-placement="bottom" data-toggle="tooltip" type="button" data-original-title="log out" id="tooltip" >
+            <li><a href="{% url 'account_logout' %}" data-placement="bottom" data-toggle="tooltip" type="button" data-original-title="log out" id="tooltip" >
                 <i class="glyphicon glyphicon-log-out"></i></a></li>
           {% else %}
-            <li><a class="btn btn-default" href="% url 'auth_login' %}">sign in</a></li>
+            <li><a class="btn btn-default" href="{% url 'google_login' %}">sign in</a></li>
           {% endif %}
           </ul>
         </div>
