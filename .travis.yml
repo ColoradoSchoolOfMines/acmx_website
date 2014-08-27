@@ -7,8 +7,8 @@ install:
   - "pip install -r requirements.txt --use-mirrors"
 #  - "pip install nose coveralls"
 script: 
-    wget https://gist.githubusercontent.com/rshipp/51ec5a69070e37b8bd4a/raw/3eaa22ac686c3ec7268c5c9982e679d75e90cb11/secrets.py -O acmx_website/secrets.py
-    python manage.py test
+  - wget https://gist.githubusercontent.com/rshipp/51ec5a69070e37b8bd4a/raw/3eaa22ac686c3ec7268c5c9982e679d75e90cb11/secrets.py -O acmx_website/secrets.py
+  - python manage.py test
 #  nosetests --with-coverage --cover-package=acmx_website
 #after_success:
 #  coveralls
