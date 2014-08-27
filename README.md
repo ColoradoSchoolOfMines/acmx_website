@@ -74,14 +74,12 @@ website:
 mkvirtualenv acmx
 git clone https://github.com/ColoradoSchoolOfMines/acmx_website.git
 cd acmx_website
+wget https://gist.githubusercontent.com/rshipp/51ec5a69070e37b8bd4a/raw/3eaa22ac686c3ec7268c5c9982e679d75e90cb11/secrets.py -O acmx_website/secrets.py
 pip install -r requirements.txt
 ```
 
-There are a few secret settings that we can't store on GitHub, so you'll have
-to ask for a copy of those before you can go any farther.
-
-Once you have all the secret stuff, apply the database migrations and start
-up the Django development server with:
+Finally, apply the database migrations and start up the Django development
+server with:
 
 ```bash
 ./manage.py syncdb
