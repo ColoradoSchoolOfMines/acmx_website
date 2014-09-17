@@ -1,13 +1,11 @@
-$font-family: Open Sans, sans-serif;
 $bg_color: #CCC;
 $color0: #434343;
-$color1: #282828;
-$btn_color: #408ED5;
 
 
 body{
-	font-family: $font_family;
+	font-family: Open Sans, sans-serif;
 	background-color: $bg_color;
+	//margin: 0;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -78,7 +76,7 @@ img#logo{
     padding-top: 5px;
     padding-bottom: 5px;
 	//margin-left: 6px;
-    color: $bg_color !important;
+    color: #CCC !important;
 }
 .navbar-inverse .navbar-nav > li > a:hover {
     color: #EEE !important;
@@ -143,7 +141,7 @@ img#logo{
 div.footer{
 	background-color: $color0;
 	text-align: left;
-    color: $bg_color;
+    color: #CCC;
     padding: 0px;
 	height: 65px;
     width: 100%;
@@ -152,7 +150,7 @@ div.footer{
     bottom: 0;
 }
 div.footer a {
-    color: $bg_color !important;
+    color: #CCC !important;
 }
 div.footer a:hover {
     color: #EEE !important;
@@ -205,7 +203,7 @@ div.welcome .form-control {
 }
 
 div.welcome small {
-    color: $bg_color;
+    color: #CCC;
 }
 
 div.welcome .btn {
@@ -215,8 +213,8 @@ div.welcome .btn {
     margin-top: 15px;
     margin-bottom: 15px;
 	border-radius: 10px 10px 10px 10px;
-    background-color: $bg_color;
-    border-color: $bg_color;
+    background-color: #CCC;
+    border-color: #CCC;
     color: #000;
 }
 
@@ -347,7 +345,7 @@ li.sort:hover {
     background-color: $color0;
     height: 290px;
     display: none;
-    color: $bg_color !important;
+    color: #CCC !important;
     border-radius: 10px 10px 10px 0;
     width: 24%;
     margin: 0.4%;
@@ -376,11 +374,11 @@ li.sort:hover {
 .mix h2 {
     font-size: 14pt;
     margin-top: 0;
-    color: $bg_color;
+    color: #CCC;
 }
 .mix p {
     font-size: 12pt;
-    color: $bg_color;
+    color: #CCC;
 }
 .mix img {
     border-radius: 8px 8px 0 0;
