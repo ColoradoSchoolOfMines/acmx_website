@@ -9,32 +9,11 @@
         <div class="panel panel-default project-content">
           <div class="panel-heading">
             <h1>{{ project.title }}</h1>
-            <h4>{{ project.description }}</h4>
-          </div>
-          <div class="tabbable tabs-left clearfix">
-            <ul id="pageTabs" class="nav nav-tabs">
-              <li class="active">
-                <a data-toggle="tab" href="#description">Description</a>
-              </li>
-            {% for id, page in project.other_pages.iteritems %}
-              <li class="">
-                <a data-toggle="tab" href="#{{ id }}">{{ page.0 }}</a>
-              </li>
-            {% endfor %}
-            </ul>
-  
-            <div id="pageTabsContent" class="tab-content">
-              <div id="description" class="tab-pane fade active in">
-                <h1>Description</h1>
-                {{ project.pages.Description }}
-              </div>
-            {% for id, page in project.other_pages.iteritems %}
-              <div id="{{ id }}" class="tab-pane fade">
-                <h1>{{ page.0 }}</h1>
-                {{ page.1|safe }}
-              </div>
-            {% endfor %}
-            </div>
+            <h4>{{ project.long_description }}</h4>
+            <h5>Contributors: {{ project.contributors }}</h5>
+            <img src="project_image.jpg">
+            <br>
+            <h4>GitHub Link: {{ project.link }}</h4>
           </div>
         </div>
       </div>
