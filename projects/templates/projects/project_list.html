@@ -23,7 +23,7 @@
       <div class="row" id="projects">
       {% for project in project_list %}
       <a href="{% url 'projects:detail' project.project_id %}" class="mix thumbnail" 
-         data-epoch="{{ project.epoch }}" data-name="{{ project.title.lower }}" />
+         data-epoch="" data-name="{{ project.title.lower }}" /> <!-- data-epoch cleared to stop error-->
         <img src="http://placekitten.com/320/200" alt="{{ project }}" title="{{ project.description }}">
         <div class="caption text-center">
           <h2>{{ project }}</h2><p>{{ project.short_desc }}</p>
