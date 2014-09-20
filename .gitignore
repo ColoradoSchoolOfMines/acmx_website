@@ -6,4 +6,5 @@ run*.sh
 secrets.py
 db.sqlite3
 .sass-cache/
+*css.map
 *~

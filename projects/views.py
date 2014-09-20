@@ -8,7 +8,7 @@ from projects.models import Project, UserProfile
 
 class DetailView(generic.DetailView):
     model = Project
-    template_name = 'projects/detail.html'
+    template_name = 'projects/project.html'
 
 
 class ProjectListView(generic.ListView):
