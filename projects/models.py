@@ -4,7 +4,8 @@ class UserProfile(models.Model):
     pass
 
 class Project(models.Model):
-    project_id = models.SlugField(max_length=50)
+    project_id = models.SlugField(max_length=50, primary_key=True,
+            unique=True)
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published', auto_now=True,
