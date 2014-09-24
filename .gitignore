@@ -4,6 +4,7 @@ dist/
 *.egg-info/
 run*.sh
 secrets.py
+deployment.py
 db.sqlite3
 .sass-cache/
 *css.map

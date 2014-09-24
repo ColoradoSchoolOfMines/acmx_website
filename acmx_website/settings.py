@@ -15,9 +15,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # Import secrets (not committed to git).
 try:
     import acmx_website.secrets as secrets
+    import acmx_website.deployment as deployment
 except ImportError:
     print("================================================================")
-    print("Missing secrets.py!")
+    print("Missing secrets.py and/or deployment.py!")
     print("This file isn't committed to git for security reasons, so you'll")
     print("need to get a copy of it another way.")
     print("================================================================")
@@ -85,12 +86,7 @@ WSGI_APPLICATION = 'acmx_website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+DATABASES = deployment.DATABASES
 
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
