@@ -78,6 +78,7 @@ mkvirtualenv acmx
 git clone https://github.com/ColoradoSchoolOfMines/acmx_website.git
 cd acmx_website
 wget https://gist.githubusercontent.com/rshipp/51ec5a69070e37b8bd4a/raw/3eaa22ac686c3ec7268c5c9982e679d75e90cb11/secrets.py -O acmx_website/secrets.py
+wget https://gist.githubusercontent.com/rshipp/51ec5a69070e37b8bd4a/raw/c9ebfd5db795bad16d7f7898ac6f94566cd3882a/deployment.py -O acmx_website/deployment.py
 pip install -r requirements.txt
 ```
 
