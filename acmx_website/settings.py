@@ -114,4 +114,3 @@ STATIC_URL = '/static/'
 
 # Custom
 LOGIN_URL = '/accounts/google/login/'
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
