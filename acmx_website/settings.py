@@ -35,7 +35,7 @@ DEBUG = secrets.DEBUG
 
 TEMPLATE_DEBUG = secrets.TEMPLATE_DEBUG
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
