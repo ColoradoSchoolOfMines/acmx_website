@@ -114,3 +114,4 @@ STATIC_URL = '/static/'
 
 # Custom
 LOGIN_URL = '/accounts/google/login/'
+LOGIN_REDIRECT_URL = '/'
