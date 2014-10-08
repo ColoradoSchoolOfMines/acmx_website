@@ -398,5 +398,10 @@ div.project-content .panel-heading {
 
   .form-search .search-query:first-child {
     width: 165px; } }
+/*
+* project create pages
+ */
+div.project_create {
+  color: white; }
 
 /*# sourceMappingURL=style.css.map */

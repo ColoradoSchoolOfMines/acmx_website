@@ -4,24 +4,17 @@
 
 {% block content %}
     <div id="page_content">
-        Create a new project!
-        <table>
-            <form action="{{ action }}" method="POST">
-                {% csrf_token %}
-                <label for="title">Title: </label>
-                <input id="title" type="text" name="title" value="{{ title }}">
-
-                <label for="description">Description: </label>
-                <input id="description" type="text" name="description" value="{{ description }}">
-
-                <label for="long_description">Long description: </label>
-                <input id="long_description" type="text" name="long_description" value="{{ long_description }}">
-
-                <label for="link">Link: </label>
-                <input id="link" type="text" name="link" value="{{ link }}">
-
-                <input type="submit" value="Create"></input>
-            </form>
-        </table>
+        <h3>Create a new project!</h3>
+        <form action="{{ action }}" method="POST">
+            {% csrf_token %}
+            <div id="project_create">
+                <span style="padding:5em">Project ID:</span> <input type="text" name="project_id" value="{{ project_id }}" size=5><br>
+                <span style="padding:5em">Title:</span> <input type="text" name="title" value="{{ title }}"><br>
+                <span style="padding:5em">Description:</span> <input type="text" name="description" value="{{ description }}"><br>
+                <span style="padding:5em">Long Description:</span> <textarea name="long_description" value="{{ long_description }}" rows=5 cols=40></textarea><br>
+                <span style="padding:5em">GitHub Link(s):</span> <input type="text" name="link" value="{{ link }}"><br>
+                <input type="submit" name="submit" value="Create">
+            </div>
+        </form>
     </div>
 {% endblock %}
