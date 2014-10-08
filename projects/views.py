@@ -19,14 +19,6 @@ class ProjectListView(generic.ListView):
         return Project.objects.order_by('-pub_date')
 
 
-class UserListView(generic.ListView):
-    template_name = 'projects/user_list.html'
-    context_object_name = 'user_list'
-
-    def get_queryset(self):
-        return UserProfile.objects.order_by('user')
-
-
 class ProjectEditView(generic.edit.UpdateView):
     model = Project
     template_name = 'projects/project_edit.html'
@@ -52,21 +44,3 @@ class ProjectCreateView(generic.edit.CreateView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super(ProjectCreateView, self).dispatch(*args, **kwargs)
-
-
-class UserProfileView(generic.DetailView):
-    model = UserProfile
-    template_name = 'projects/user_profile.html'
-
-
-class UserProfileEditView(generic.edit.UpdateView):
-    model = UserProfile
-    template_name = 'projects/user_profile_edit.html'
-
-    def get_success_url(self):
-        return reverse('projects:user_profile_edit',
-                       kwargs={'pk': self.kwargs.get('pk')})
-
-    @method_decorator(login_required)
-    def dispatch(self, *args, **kwargs):
-        return super(UserProfileEditView, self).dispatch(*args, **kwargs)

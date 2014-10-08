@@ -15,10 +15,4 @@ urlpatterns = patterns('',
     url(r'^p/(?P<pk>\w+)/$', views.DetailView.as_view(), name='detail'),
     url(r'^p/(?P<pk>\w+)/edit$', views.ProjectEditView.as_view(), name='edit'),
     url(r'^p/new$', views.ProjectCreateView.as_view(), name='create'),
-    # User views.
-    url(r'^u/$', views.UserListView.as_view(), name='user_list'),
-    url(r'^u/(?P<pk>\w+)/$', views.UserProfileView.as_view(),
-        name='user_profile'),
-    url(r'^u/(?P<pk>\w+)/edit$', views.UserProfileEditView.as_view(),
-        name='user_profile_edit'),
 )
