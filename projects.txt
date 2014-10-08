@@ -1,0 +1,34 @@
+Project Title: ACMx Website
+Description: Designing acmxlabs.org for the Club
+Long Description: The acmxlabs.org website is the main form of communication between the club and the student body, where students and club members can view what projects are currently in production. They can view different projects, the goal of each project, languages used, team members, and more. 
+Primary Languages Used: HTML, CSS, JavaScript, Python (Django framework)
+Contributors: Ryan Shipp (lead), Jack Rosenthal, Danny Romero
+GitHub link(s): https://github.com/ColoradoSchoolOfMines/acmx_website
+Images (from /static/projects/project_images): acmxlabs.jpg
+
+Project Title: SmartLots
+Description: Real-Time Parking Lot Map
+Long Description: The SmartLots project aims to create a real-time web interface to show just how many cars are in a given lot on campus. Using magnetometer sensors and the power of physics, we can figure out when a car enters and leaves a lot. This information is uploaded to a website for easy viewing and made available to anyone. Now you can tell when the CTLM lot is full, rather than waste 5 minutes of gas and time driving around to find that there are no spots. Note: This project is currently undergoing a massive refactor, particularly on the sensor side.
+Primary Languages Used: 
+Contributors: (lead)
+GitHub link(s): Parking sensor - https://github.com/ColoradoSchoolOfMines/parking_sensor
+				Baystation - https://github.com/ColoradoSchoolOfMines/ParkingPi
+				WebApp - https://github.com/ColoradoSchoolOfMines/smartlots
+Images (from /static/projects/project_images):
+
+Project Title: Schedule Miner
+Description: An assistant for students for their class schedules.
+Long Description:
+Primary Languages Used: HTML, CSS, JavaScript, Ruby on Rails
+Contributors: Jesse Weaver (lead), Steve Hamrick, Brennan Fieck, Patrick Soboleski
+GitHub link(s): https://github.com/ColoradoSchoolOfMines/schedule_miner
+Images (from /static/projects/project_images):
+
+Project Title: Kinect
+Description: Developing and Maintaining the Kinect Games Exhibit in Brown Hall
+Long Description: 
+Primary Languages Used: C#
+Contributors: John Kelley (lead), Alan Champion, Krista Horn
+GitHub link(s): Arkinect - https://github.com/ColoradoSchoolOfMines/Arkinect
+				Minimal2D - https://github.com/ColoradoSchoolOfMines/KinectMinimal2D
+Images (from /static/projects/project_images):
