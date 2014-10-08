@@ -35,6 +35,10 @@ class ProjectEditView(generic.edit.UpdateView):
         return reverse('projects:edit',
                        kwargs={'pk': self.kwargs.get('pk')})
 
+    @method_decorator(login_required)
+    def dispatch(self, *args, **kwargs):
+        return super(ProjectCreateView, self).dispatch(*args, **kwargs)
+
 
 class ProjectCreateView(generic.edit.CreateView):
     model = Project
