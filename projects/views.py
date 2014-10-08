@@ -29,7 +29,7 @@ class ProjectEditView(generic.edit.UpdateView):
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
-        return super(ProjectCreateView, self).dispatch(*args, **kwargs)
+        return super(ProjectEditView, self).dispatch(*args, **kwargs)
 
 
 class ProjectCreateView(generic.edit.CreateView):
