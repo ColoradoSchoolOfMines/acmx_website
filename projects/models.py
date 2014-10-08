@@ -1,17 +1,21 @@
 from django.db import models
+from django.utils.text import slugify
 
 class UserProfile(models.Model):
     pass
 
 class Project(models.Model):
-    project_id = models.SlugField(max_length=50, primary_key=True,
-            unique=True)
+    slug = models.SlugField(max_length=50, unique=True)
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     long_description = models.TextField()
     link = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published', auto_now=True,
             auto_now_add=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Project, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return self.title
