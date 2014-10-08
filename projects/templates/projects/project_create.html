@@ -8,7 +8,18 @@
         <table>
             <form action="{{ action }}" method="POST">
                 {% csrf_token %}
-                {{ form.as_p }}
+                <label for="title">Title: </label>
+                <input id="title" type="text" name="title" value="{{ title }}">
+
+                <label for="description">Description: </label>
+                <input id="description" type="text" name="description" value="{{ description }}">
+
+                <label for="long_description">Long description: </label>
+                <input id="long_description" type="text" name="long_description" value="{{ long_description }}">
+
+                <label for="link">Link: </label>
+                <input id="link" type="text" name="link" value="{{ link }}">
+
                 <input type="submit" value="Create"></input>
             </form>
         </table>
