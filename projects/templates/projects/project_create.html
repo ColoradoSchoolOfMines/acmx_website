@@ -8,7 +8,6 @@
         <form action="{{ action }}" method="POST">
             {% csrf_token %}
             <div id="project_create">
-                <span style="padding:5em">Project ID:</span> <input type="text" name="project_id" value="{{ project_id }}" size=5><br>
                 <span style="padding:5em">Title:</span> <input type="text" name="title" value="{{ title }}"><br>
                 <span style="padding:5em">Description:</span> <input type="text" name="description" value="{{ description }}"><br>
                 <span style="padding:5em">Long Description:</span> <textarea name="long_description" value="{{ long_description }}" rows=5 cols=40></textarea><br>
