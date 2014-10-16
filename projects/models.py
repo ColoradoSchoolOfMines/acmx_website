@@ -5,6 +5,7 @@ class UserProfile(models.Model):
     pass
 
 class Project(models.Model):
+    project_id = models.AutoField(primary_key=True)
     slug = models.SlugField(max_length=50, unique=True)
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
