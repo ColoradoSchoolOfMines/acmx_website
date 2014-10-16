@@ -8,4 +8,5 @@ deployment.py
 db.sqlite3
 .sass-cache/
 *css.map
+*.swp
 *~
