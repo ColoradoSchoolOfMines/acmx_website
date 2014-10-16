@@ -7,14 +7,14 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('projects', '0006_project_image'),
+        ('projects', '0007_project_contributors'),
     ]
 
     operations = [
         migrations.AddField(
             model_name='project',
-            name='contributors',
-            field=models.CharField(default='Unknown', max_length=200),
+            name='languages',
+            field=models.CharField(max_length=200, default='None'),
             preserve_default=False,
         ),
     ]

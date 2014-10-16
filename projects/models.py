@@ -12,6 +12,7 @@ class Project(models.Model):
     link = models.CharField(max_length=200)
     image = models.ImageField()
     contributors = models.CharField(max_length=200)
+    languages = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published', auto_now=True,
             auto_now_add=True)
 
