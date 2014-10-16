@@ -135,32 +135,25 @@ div.footer {
   margin-top: -65px;
   position: absolute;
   bottom: 0; }
-
-div.footer a {
-  color: #CCC !important; }
-
-div.footer a:hover {
-  color: #EEE !important; }
-
-div.footer img {
-  height: 32px;
-  margin-right: 10px; }
-
-div.footer a.logo {
-  font-size: 14pt; }
-
-div.footer a.footer-link {
-  font-size: 11pt;
-  margin-left: 15px; }
-
-div.footer .row {
-  margin: 15px; }
-
-div.footer .copyright {
-  text-align: right;
-  float: right;
-  font-size: 8pt;
-  line-height: 32px; }
+  div.footer a {
+    color: #CCC !important; }
+  div.footer a:hover {
+    color: #EEE !important; }
+  div.footer img {
+    height: 32px;
+    margin-right: 10px; }
+  div.footer a.logo {
+    font-size: 14pt; }
+  div.footer a.footer-link {
+    font-size: 11pt;
+    margin-left: 15px; }
+  div.footer .row {
+    margin: 15px; }
+  div.footer .copyright {
+    text-align: right;
+    float: right;
+    font-size: 8pt;
+    line-height: 32px; }
 
 /*
  * Custom CSS for the homepage.
@@ -174,36 +167,31 @@ div.welcome {
   text-align: left;
   color: white;
   font-size: 12pt; }
-
-div.welcome h1 {
-  margin-top: 0; }
-
-div.welcome .form-control {
-  margin-bottom: 10px;
-  border-radius: 10px 10px 10px 0;
-  height: 40px; }
-
-div.welcome small {
-  color: #CCC; }
-
-div.welcome .btn {
-  width: 100%;
-  height: 40px;
-  margin-left: 0;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px 10px 10px 10px;
-  background-color: #CCC;
-  border-color: #CCC;
-  color: #000; }
-
-div.welcome .btn-default {
-  width: 100%;
-  height: 40px;
-  margin-left: 0;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px 0px 10px 10px; }
+  div.welcome h1 {
+    margin-top: 0; }
+  div.welcome .form-control {
+    margin-bottom: 10px;
+    border-radius: 10px 10px 10px 0;
+    height: 40px; }
+  div.welcome small {
+    color: #CCC; }
+  div.welcome .btn {
+    width: 100%;
+    height: 40px;
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #CCC;
+    border-color: #CCC;
+    color: #000; }
+  div.welcome .btn-default {
+    width: 100%;
+    height: 40px;
+    margin-left: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px 0px 10px 10px; }
 
 /*
  * Custom CSS for other pages.
@@ -263,29 +251,23 @@ div.wordbox {
 .project-filter {
   margin-top: 15px;
   margin-bottom: 15px; }
-
-.project-filter button {
-  background-color: #434343;
-  border-radius: 10px 10px 10px 0;
-  border-color: transparent; }
-
-.project-filter button:hover {
-  background-color: #282828; }
-
-.project-filter button:focus {
-  background-color: #282828; }
-
-.project-filter .form-control {
-  width: 100%; }
-
-.project-filter ul {
-  background-color: #434343;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 10px 10px 10px 0; }
-
-.project-filter .input-group-btn {
-  width: 1%; }
+  .project-filter button {
+    background-color: #434343;
+    border-radius: 10px 10px 10px 0;
+    border-color: transparent; }
+  .project-filter button:hover {
+    background-color: #282828; }
+  .project-filter button:focus {
+    background-color: #282828; }
+  .project-filter .form-control {
+    width: 100%; }
+  .project-filter ul {
+    background-color: #434343;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px 10px 10px 0; }
+  .project-filter .input-group-btn {
+    width: 1%; }
 
 li.sort {
   background-color: #434343;
@@ -319,6 +301,15 @@ li.sort:hover {
   text-align: left;
   margin-bottom: 1%;
   overflow: hidden; }
+  .mix h2 {
+    font-size: 14pt;
+    margin-top: 0;
+    color: #CCC; }
+  .mix p {
+    font-size: 12pt;
+    color: #CCC; }
+  .mix img {
+    border-radius: 8px 8px 0 0; }
 
 .mix:hover {
   background-color: #282828; }
@@ -335,50 +326,29 @@ li.sort:hover {
   display: inline-block;
   padding-top: 60%; }
 
-.mix h2 {
-  font-size: 14pt;
-  margin-top: 0;
-  color: #CCC; }
-
-.mix p {
-  font-size: 12pt;
-  color: #CCC; }
-
-.mix img {
-  border-radius: 8px 8px 0 0; }
-
 /* Project pages */
 div.project-content {
   margin-top: 15px;
   padding-top: 0;
   width: 100%;
   border-radius: 10px 10px 10px 0; }
-
-div.project-content .panel-heading {
-  border-radius: 10px 10px 0px 0; }
-
-div.project-content .tabs-left .nav-tabs a {
-  color: #434343 !important; }
-
-div.project-content .tabs-left .nav-tabs > li:first-child > a,
-div.project-content .tabs-left .nav-tabs > li:last-child > a,
-div.project-content .tabs-left .nav-tabs {
-  border-radius: 0; }
-
-div.project-content .tab-content {
-  display: inline-block;
-  padding: 25px;
-  padding-top: 0;
-  width: 75%; }
-
-div.project-content .panel-heading {
-  padding-left: 40px; }
-  div.project-content .panel-heading h1 {
-    margin-top: 20px; }
-
-/* login page styles */
-.login-container {
-  margin: auto; }
+  div.project-content .panel-heading {
+    border-radius: 10px 10px 0px 0; }
+  div.project-content .tabs-left .nav-tabs a {
+    color: #434343 !important; }
+  div.project-content .tabs-left .nav-tabs > li:first-child > a,
+  div.project-content .tabs-left .nav-tabs > li:last-child > a,
+  div.project-content .tabs-left .nav-tabs {
+    border-radius: 0; }
+  div.project-content .tab-content {
+    display: inline-block;
+    padding: 25px;
+    padding-top: 0;
+    width: 75%; }
+  div.project-content .panel-heading {
+    padding-left: 40px; }
+    div.project-content .panel-heading h1 {
+      margin-top: 20px; }
 
 /* 
  * Custom @media directives.
@@ -398,10 +368,5 @@ div.project-content .panel-heading {
 
   .form-search .search-query:first-child {
     width: 165px; } }
-/*
-* project create pages
- */
-div.project_create {
-  color: white; }
 
 /*# sourceMappingURL=style.css.map */
