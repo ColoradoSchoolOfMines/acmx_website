@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='project',
             name='id',
-            field=models.AutoField(default=1, auto_created=True, serialize=False, primary_key=True, verbose_name='ID'),
+            field=models.AutoField(auto_created=True, serialize=False, primary_key=True, verbose_name='ID'),
             preserve_default=False,
         ),
         migrations.AddField(
