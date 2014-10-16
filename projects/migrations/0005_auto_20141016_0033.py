@@ -11,15 +11,20 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RemoveField(
+            model_name='project',
+            name='project_id',
+        ),
+        migrations.AddField(
+            model_name='project',
+            name='id',
+            field=models.AutoField(default=1, auto_created=True, serialize=False, primary_key=True, verbose_name='ID'),
+            preserve_default=False,
+        ),
         migrations.AddField(
             model_name='project',
             name='slug',
-            field=models.SlugField(unique=True, default=1),
+            field=models.SlugField(default=1, unique=True),
             preserve_default=False,
-        ),
-        migrations.AlterField(
-            model_name='project',
-            name='project_id',
-            field=models.AutoField(serialize=False, primary_key=True),
         ),
     ]
