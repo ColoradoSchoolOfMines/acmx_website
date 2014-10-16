@@ -10,6 +10,7 @@ class Project(models.Model):
     description = models.CharField(max_length=200)
     long_description = models.TextField()
     link = models.CharField(max_length=200)
+    image = models.ImageField()
     pub_date = models.DateTimeField('date published', auto_now=True,
             auto_now_add=True)
 
