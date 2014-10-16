@@ -2,8 +2,7 @@
 
 $font_family: 'Open Sans', sans-serif !important;
 $bg_color: #CCC;
-$color0: #434343;
-$color1: #282828;
+$navbar_color: #434343; /* also used on footer */
 $btn_color: #408ED5;
 
 
@@ -43,7 +42,7 @@ div.spacer {
  */
 
 .navbar {
-	background-color: $color0;
+	background-color: $navbar_color;
 	padding: 10px 10px 10px 10px;
 	z-index: 999;
     border-radius: 0;
@@ -115,7 +114,7 @@ img#logo{
     margin-left: 15px;
 }
 .navbar-inverse .navbar-collapse {
-    background-color: $color0;
+    background-color: $navbar_color;
     border-top: none;
     box-shadow: none;
 }
@@ -143,7 +142,7 @@ img#logo{
     padding-right: 0;
 }
 div.footer{
-    background-color: $color0;
+    background-color: $navbar_color;
     text-align: left;
     color: $bg_color;
     padding: 0px;
@@ -317,7 +316,7 @@ div.wordbox{
     }
 
     ul {
-        background-color: $color0;
+        background-color: $navbar_color;
         padding-top: 10px;
         padding-bottom: 10px;
 	    border-radius: 10px 10px 10px 0;
@@ -327,7 +326,7 @@ div.wordbox{
     }
 }
 li.sort {
-    background-color: $color0;
+    background-color: $navbar_color;
     color: $bg_color;
     line-height: 150%;
     padding: 10px;
@@ -349,7 +348,7 @@ li.sort:hover {
   width: 100%;
 }
 .mix {
-    background-color: $color0;
+    background-color: $navbar_color;
     height: 290px;
     display: none;
     color: $bg_color !important;
@@ -404,7 +403,7 @@ div.project-content {
     }
 
     .tabs-left .nav-tabs a {
-        color: $color0 !important;
+        color: $navbar_color !important;
     }
 
     .tabs-left .nav-tabs > li:first-child > a,
