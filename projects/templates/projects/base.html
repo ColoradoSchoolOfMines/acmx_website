@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'projects/style.css' %}" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- jQuery -->
+  {% block extra_includes %}{% endblock %}
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <title>{% block title %}ACMx Labs{% endblock %}</title>
 </head>
