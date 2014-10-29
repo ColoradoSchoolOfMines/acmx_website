@@ -50,7 +50,7 @@
           {% if user.is_authenticated %}
             <li><a href="{% url 'projects:create' %}" data-placement="bottom" data-toggle="tooltip" type="button" data-original-title="new project">
                 <i class="glyphicon glyphicon-plus"></i></a></li>
-            <li><a href="{% url 'account_logout' %}" data-placement="bottom" data-toggle="tooltip" type="button" data-original-title="log out" id="tooltip" >
+             <li><a data-toggle="modal" data-target="#logoutModal" data-placement="bottom" data-toggle="tooltip" type="button" data-original-title="log out" id="tooltip">
                 <i class="glyphicon glyphicon-log-out"></i></a></li>
           {% else %}
             <li><a class="btn btn-default" href="{% url 'google_login' %}">sign in</a></li>
@@ -67,21 +67,41 @@
       {% endblock %}
     </div>
   
-      <div class="footer">
-        <div class="container-fluid col-md-8 col-md-offset-2">
-          <div class="row">
-            <a href="/" class="logo">
-              <img src="{% static 'projects/transgigabot.gif' %}" />ACMxLabs
-            </a>
-            <div class="copyright">
-              <a href="https://github.com/ColoradoSchoolOfMines"><i class="fa fa-github fa-2x"></i>&nbsp;</a>
-              <a href="https://twitter.com/acmxlabs"><i class="fa fa-twitter fa-2x"></i>&nbsp;</a>
-              &copy; 2014 ACMx. All rights reserved.
-            </div>
-          </div>
+  <div class="footer">
+    <div class="container-fluid col-md-8 col-md-offset-2">
+      <div class="row">
+        <a href="/" class="logo">
+          <img src="{% static 'projects/transgigabot.gif' %}" />ACMxLabs
+        </a>
+        <div class="copyright">
+          <a href="https://github.com/ColoradoSchoolOfMines"><i class="fa fa-github fa-2x"></i>&nbsp;</a>
+          <a href="https://twitter.com/acmxlabs"><i class="fa fa-twitter fa-2x"></i>&nbsp;</a>
+          &copy; 2014 ACMx. All rights reserved.
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form class="well" method="post" action="{% url 'account_logout' %}">
+          <div class="modal-header">
+            <h3>Are you sure you want to log out?</h3>
+          </div>
+          <div class="modal-body">
+            {% csrf_token %}
+            {{form.as_p}}
+          </div>
+          <div class="modal-footer">
+            <input class="btn btn-primary" type="submit" value="Log Out" />
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- js -->
   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>

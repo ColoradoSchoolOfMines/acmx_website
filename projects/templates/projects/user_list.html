@@ -4,8 +4,7 @@
 
 {% block content %}
     {% for user in user_list %}
-        <!-- Link to custom user pages. Use AJAX stuff to avoid
-             having to define more urls in Django -->
+        <!-- Link to custom user pages. Use AJAX stuff to avoid having to define more urls in Django -->
         <a href="{% url 'projects:user_profile' user.user.username %}">{{ user }}</a>
         <a href="{% url 'projects:user_profile_edit' user.user.username %}">[EDIT]</a>
         <br>
