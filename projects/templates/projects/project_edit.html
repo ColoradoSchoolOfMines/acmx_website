@@ -3,14 +3,6 @@
 {% block title %}Edit {{ project.title }} | ACMx Labs{% endblock %}
 
 {% block content %}
-    <nav>
-        {% for page in project.pages %}
-            <!-- Link to custom project pages. Use AJAX stuff to avoid
-                 having to define more urls in Django -->
-            <a href="">{{ page }}</a>
-        {% endfor %}
-    </nav>
-
     <div id="page_content">
         This is the page content for {{ project.title }}.
         <form action="{{ action }}" method="POST">

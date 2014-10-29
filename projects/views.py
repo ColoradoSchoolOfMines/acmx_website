@@ -1,5 +1,6 @@
 from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required
+from django.utils.text import slugify
 from django.utils.decorators import method_decorator
 from django.views import generic
 
@@ -11,21 +12,15 @@ class DetailView(generic.DetailView):
     template_name = 'projects/project.html'
 
 
-class ProjectListView(generic.ListView):
-    template_name = 'projects/project_list.html'
-    context_object_name = 'project_list'
-
-    def get_queryset(self):
-        return Project.objects.order_by('-pub_date')
-
-
 class ProjectEditView(generic.edit.UpdateView):
     model = Project
     template_name = 'projects/project_edit.html'
+    fields = ['title', 'description', 'long_description', 'link']
 
     def get_success_url(self):
-        return reverse('projects:edit',
-                       kwargs={'pk': self.kwargs.get('pk')})
+        # TODO: Is this safe?
+        return reverse('projects:detail',
+                       kwargs={'slug': slugify(self.request.POST['title'])})
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
@@ -35,11 +30,12 @@ class ProjectEditView(generic.edit.UpdateView):
 class ProjectCreateView(generic.edit.CreateView):
     model = Project
     template_name = 'projects/project_create.html'
+    fields = ['title', 'description', 'long_description', 'link']
 
     def get_success_url(self):
         # TODO: Is this safe?
         return reverse('projects:detail',
-                       kwargs={'pk': self.request.POST['project_id']})
+                       kwargs={'slug': slugify(self.request.POST['title'])})
 
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):

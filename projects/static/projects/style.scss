@@ -2,8 +2,7 @@
 
 $font_family: 'Open Sans', sans-serif !important;
 $bg_color: #CCC;
-$color0: #434343;
-$color1: #282828;
+$navbar_color: #434343; /* also used on footer */
 $btn_color: #408ED5;
 
 
@@ -43,7 +42,7 @@ div.spacer {
  */
 
 .navbar {
-	background-color: $color0;
+	background-color: $navbar_color;
 	padding: 10px 10px 10px 10px;
 	z-index: 999;
     border-radius: 0;
@@ -115,7 +114,7 @@ img#logo{
     margin-left: 15px;
 }
 .navbar-inverse .navbar-collapse {
-    background-color: $color0;
+    background-color: $navbar_color;
     border-top: none;
     box-shadow: none;
 }
@@ -143,94 +142,91 @@ img#logo{
     padding-right: 0;
 }
 div.footer{
-	background-color: $color0;
-	text-align: left;
+    background-color: $navbar_color;
+    text-align: left;
     color: $bg_color;
     padding: 0px;
-	height: 65px;
+    height: 65px;
     width: 100%;
     margin-top: -65px;
     position: absolute;
     bottom: 0;
-}
-div.footer a {
+    a {
     color: $bg_color !important;
-}
-div.footer a:hover {
+    }
+    a:hover {
     color: #EEE !important;
-}
-div.footer img {
+    }
+    img {
     height: 32px;
     margin-right: 10px;
-}
-div.footer a.logo {
+    }
+    a.logo {
     font-size: 14pt;
-}
-div.footer a.footer-link {
+    }
+    a.footer-link {
     font-size: 11pt;
     margin-left: 15px;
-}
-div.footer .row {
+    }
+    .row {
     margin: 15px;
-}
-div.footer .copyright {
+    }
+    .copyright {
     text-align: right;
     float: right;
     font-size: 8pt;
     line-height: 32px;
+    }
 }
-
 
 /*
  * Custom CSS for the homepage.
  */
 
 div.welcome {
-	display: inline-block;
+    display: inline-block;
     width: 100%;
     padding-top: 75px;
     padding-bottom: 200px;
-	background-color: rgba(0,0,0,0.5);
-	text-align: left;
-	color: white;
+    background-color: rgba(0,0,0,0.5);
+    text-align: left;
+    color: white;
     font-size: 12pt;
-}
+    h1 {
+        margin-top: 0;
+    }
 
-div.welcome h1 {
-    margin-top: 0;
-}
+    .form-control {
+        margin-bottom: 10px;
+        border-radius: 10px 10px 10px 0;
+        height: 40px;
+    }
 
-div.welcome .form-control {
-    margin-bottom: 10px;
-	border-radius: 10px 10px 10px 0;
-    height: 40px;
-}
+    small {
+        color: $bg_color;
+    }
 
-div.welcome small {
-    color: $bg_color;
-}
+    .btn {
+        width: 100%;
+        height: 40px;
+        margin-left: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border-radius: 10px 10px 10px 10px;
+        background-color: $bg_color;
+        border-color: $bg_color;
+        color: #000;
+    }
 
-div.welcome .btn {
-    width: 100%;
-    height: 40px;
-    margin-left: 0;
-    margin-top: 15px;
-    margin-bottom: 15px;
-	border-radius: 10px 10px 10px 10px;
-    background-color: $bg_color;
-    border-color: $bg_color;
-    color: #000;
+    .btn-default {
+        width: 100%;
+        height: 40px;
+        margin-left: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border-radius: 10px 0px 10px 10px;
+    }
 }
-
-div.welcome .btn-default {
-    width: 100%;
-    height: 40px;
-    margin-left: 0;
-    margin-top: 15px;
-    margin-bottom: 15px;
-	border-radius: 10px 0px 10px 10px;
-}
-
 
 /*
  * Custom CSS for other pages.
@@ -300,32 +296,37 @@ div.wordbox{
 .project-filter {
     margin-top: 15px;
     margin-bottom: 15px;
-}
-.project-filter button {
-    background-color: #434343;
-	border-radius: 10px 10px 10px 0;
-    border-color: transparent;
-}
-.project-filter button:hover {
-    background-color: #282828;
-}
-.project-filter button:focus {
-    background-color: #282828;
-}
-.project-filter .form-control {
-    width: 100%;
-}
-.project-filter ul {
-    background-color: $color0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-	border-radius: 10px 10px 10px 0;
-}
-.project-filter .input-group-btn {
-    width: 1%;
+
+    button {
+        background-color: #434343;
+        border-radius: 10px 10px 10px 0;
+        border-color: transparent;
+    }
+
+    button:hover {
+        background-color: #282828;
+    }
+
+    button:focus {
+        background-color: #282828;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    ul {
+        background-color: $navbar_color;
+        padding-top: 10px;
+        padding-bottom: 10px;
+	    border-radius: 10px 10px 10px 0;
+    }
+    .input-group-btn {
+        width: 1%;
+    }
 }
 li.sort {
-    background-color: $color0;
+    background-color: $navbar_color;
     color: $bg_color;
     line-height: 150%;
     padding: 10px;
@@ -347,7 +348,7 @@ li.sort:hover {
   width: 100%;
 }
 .mix {
-    background-color: $color0;
+    background-color: $navbar_color;
     height: 290px;
     display: none;
     color: $bg_color !important;
@@ -358,6 +359,19 @@ li.sort:hover {
     text-align: left;
     margin-bottom: 1%;
     overflow: hidden;
+
+    h2 {
+        font-size: 14pt;
+        margin-top: 0;
+        color: $bg_color;
+    }
+    p {
+        font-size: 12pt;
+        color: $bg_color;
+    }
+    img {
+        border-radius: 8px 8px 0 0;
+    }
 }
 .mix:hover {
     background-color: #282828;
@@ -376,18 +390,6 @@ li.sort:hover {
   display: inline-block;
   padding-top: 60%;
 }
-.mix h2 {
-    font-size: 14pt;
-    margin-top: 0;
-    color: $bg_color;
-}
-.mix p {
-    font-size: 12pt;
-    color: $bg_color;
-}
-.mix img {
-    border-radius: 8px 8px 0 0;
-}
 
 /* Project pages */
 div.project-content {
@@ -395,38 +397,33 @@ div.project-content {
     padding-top: 0;
     width: 100%;
 	border-radius: 10px 10px 10px 0;
-}
-div.project-content .panel-heading {
-	border-radius: 10px 10px 0px 0;
-}
-div.project-content .tabs-left .nav-tabs a {
-    color: $color0 !important;
-}
-div.project-content .tabs-left .nav-tabs > li:first-child > a,
-div.project-content .tabs-left .nav-tabs > li:last-child > a,
-div.project-content .tabs-left .nav-tabs {
-    border-radius: 0;
-}
-div.project-content .tab-content {
-    display: inline-block;
-    padding: 25px;
-    padding-top: 0;
-    width: 75%;
-}
-div.project-content .panel-heading {
-    padding-left: 40px;
-    h1{
-    margin-top: 20px;
-    }
-}
 
-/* login page styles */
-.login-container{
-	//width: 600px;
-	margin: auto;
-	//font-size: 18px;
-}
-.login-container input {
+    .panel-heading {
+	    border-radius: 10px 10px 0px 0;
+    }
+
+    .tabs-left .nav-tabs a {
+        color: $navbar_color !important;
+    }
+
+    .tabs-left .nav-tabs > li:first-child > a,
+    .tabs-left .nav-tabs > li:last-child > a,
+    .tabs-left .nav-tabs {
+        border-radius: 0;
+    }
+
+    .tab-content {
+        display: inline-block;
+        padding: 25px;
+        padding-top: 0;
+        width: 75%;
+    }
+    .panel-heading {
+        padding-left: 40px;
+        h1 {
+            margin-top: 20px;
+        }
+    }
 }
 
 /* 

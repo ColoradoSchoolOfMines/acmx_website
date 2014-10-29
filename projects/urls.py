@@ -11,8 +11,7 @@ urlpatterns = patterns('',
     url(r'^contact$', TemplateView.as_view(template_name='projects/contact.html'),
         name='contact'),
     # Project views.
-    url(r'^p/$', views.ProjectListView.as_view(), name='project_list'),
-    url(r'^p/(?P<pk>\w+)/$', views.DetailView.as_view(), name='detail'),
-    url(r'^p/(?P<pk>\w+)/edit$', views.ProjectEditView.as_view(), name='edit'),
+    url(r'^p/(?P<slug>[\w-]+)/$', views.DetailView.as_view(), name='detail'),
+    url(r'^p/(?P<slug>[\w-]+)/edit$', views.ProjectEditView.as_view(), name='edit'),
     url(r'^p/new$', views.ProjectCreateView.as_view(), name='create'),
 )
