@@ -4,8 +4,9 @@ from projects import views
 
 urlpatterns = patterns('',
     # Template views.
-    url(r'^$', TemplateView.as_view(template_name='projects/index.html'),
-        name='index'),
+    url(r'^$', views.IndexView.as_view(), name = 'index'),
+    #url(r'^$', TemplateView.as_view(template_name='projects/index.html'),
+     #   name='index'),
     url(r'^about$', TemplateView.as_view(template_name='projects/about.html'),
         name='about'),
     url(r'^contact$', TemplateView.as_view(template_name='projects/contact.html'),

@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
 from django.utils.decorators import method_decorator
 from django.views import generic
+from django.utils import timezone
 
 from projects.models import Project, UserProfile
 
@@ -11,6 +12,14 @@ class DetailView(generic.DetailView):
     model = Project
     template_name = 'projects/project.html'
 
+class IndexView(generic.list.ListView):
+    model = Project
+    template_name = 'projects/index.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
 
 class ProjectEditView(generic.edit.UpdateView):
     model = Project

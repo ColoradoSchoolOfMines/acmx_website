@@ -12,6 +12,14 @@
   <!-- jQuery -->
   {% block extra_includes %}{% endblock %}
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>  
+  <script>
+    $(function() {
+        $("#accordion").accordion({
+            collapsible: true
+        });
+    });
+  </script>
   <title>{% block title %}ACMx Labs{% endblock %}</title>
 </head>
 <body>

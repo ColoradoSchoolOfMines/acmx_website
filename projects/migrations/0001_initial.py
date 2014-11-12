@@ -13,7 +13,16 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Project',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True, serialize=False)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('slug', models.SlugField(unique=True)),
+                ('title', models.CharField(max_length=200)),
+                ('description', models.CharField(max_length=200)),
+                ('long_description', models.TextField()),
+                ('link', models.CharField(max_length=200)),
+                ('image', models.ImageField(upload_to=b'')),
+                ('contributors', models.CharField(max_length=200)),
+                ('languages', models.CharField(max_length=200)),
+                ('pub_date', models.DateTimeField(auto_now=True, verbose_name=b'date published', auto_now_add=True)),
             ],
             options={
             },
@@ -22,7 +31,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='UserProfile',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True, serialize=False)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
             ],
             options={
             },

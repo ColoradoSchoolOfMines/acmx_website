@@ -10,6 +10,59 @@
                         {% if user.is_authenticated %}
                             <h1> Welcome to ACMx!</h1>
                             <p>You are now logged in, congrats</p>
+
+<ul>
+    {% for project in project_list %}
+        <li>{{ project.title }}</li>
+    {% empty %}
+        <li>No projects yet</li>
+    {% endfor %}
+</ul>
+
+<div id="accordion">
+    <hgroup>
+        <h3>ACMx Website</h3>
+        <h5>Designing acmxlabs.org for the Club</h5>
+    </hgroup>
+    <div>
+        <p>The acmxlabs.org website is the main form of communication between the club and the student body, where students and club members can view what projects are currently in production. They can view different projects, the goal of each project, languages used, team members, and more.</p>
+        <p>Primary Languages Used: HTML, CSS, JavaScript, Python (Django framework)</p>
+        <p>Contributors: Ryan Shipp (lead), Jack Rosenthal, Danny Romero</p>
+        <p>GitHub link(s): https://github.com/ColoradoSchoolOfMines/acmx_website</p>
+        <img>
+    </div>
+    <hgroup>
+        <h3>Project 2</h3>
+        <h5>-- Short description --</h5>
+    </hgroup>
+    <div>
+        <p>-- Long description --</p>
+        <p>-- Primary Languages Used --</p>
+        <p>-- Contributors --</p>
+        <p>-- GitHub link(s) --</p>
+    </div>
+    <hgroup>
+        <h3>Project 3</h3>
+        <h5>-- Short description --</h5>
+    </hgroup>
+    <div>
+        <p>-- Long description --</p>
+        <p>-- Primary Languages Used --</p>
+        <p>-- Contributors --</p>
+        <p>-- GitHub link(s) --</p>
+    </div>
+    <hgroup>
+        <h3>Project 4</h3>
+        <h5>-- Short description --</h5>
+    </hgroup>
+    <div>
+        <p>-- Long description --</p>
+        <p>-- Primary Languages Used --</p>
+        <p>-- Contributors --</p>
+        <p>-- GitHub link(s) --</p>
+    </div>
+</div>
+
                         {% else %}
                             <h1>Make something epic. Share it.</h1>
                             <p>We are the Association for Computing Machinery group on campus at the Colorado School of Mines.</p>
