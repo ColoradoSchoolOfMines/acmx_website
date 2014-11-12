@@ -1,14 +1,47 @@
 {% extends "projects/base.html" %}
+{% load staticfiles %}
+
+{% block extra_includes %}
+    <link rel="stylesheet" href="{% static 'projects/editor.css' %}"/>
+    <script type="text/javascript" src="{% static 'projects/editor.js' %}"></script>
+    <script type="text/javascript" src="{% static 'projects/marked.js' %}"></script>
+{% endblock %}
 
 {% block title %}Edit {{ project.title }} | ACMx Labs{% endblock %}
 
 {% block content %}
-    <div id="page_content">
+    <div id="page_content" class="container-fluid col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" style="margin-bottom:100px;">
         This is the page content for {{ project.title }}.
-        <form action="{{ action }}" method="POST">
+
+        <form action="{{ action }}" method="POST" role="form">
             {% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Save"></input>
+            <div id="project_create">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" value="{{ project.title }}"
+                           class="form-control" placeholder="Enter project name">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" name="description" id="description" value="{{ project.description }}"
+                           class="form-control" placeholder="Enter a short description">
+                </div>
+                <div class="form-group">
+                    <label for="long_description">Details</label>
+                    <textarea name="long_description" id="long_description">{{ project.long_description }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="link">Link</label>
+                    <input type="text" name="link" id="link" value="{{ project.link }}"
+                           class="form-control" placeholder="Enter the main link">
+                </div>
+                <input type="submit" name="submit" class="btn btn-default" value="Save">
+            </div>
         </form>
+
+        <script>
+        var editor = new Editor();
+        editor.render();
+        </script>
     </div>
 {% endblock %}
