@@ -12,14 +12,29 @@
 {% block content %}
     <div id="page_content">
         <h3>Create a new project!</h3>
-        <form action="{{ action }}" method="POST">
+        <form action="{{ action }}" method="POST" role="form">
             {% csrf_token %}
             <div id="project_create">
-                <span style="padding:5em">Title:</span> <input type="text" name="title" value="{{ title }}"><br>
-                <span style="padding:5em">Description:</span> <input type="text" name="description" value="{{ description }}"><br>
-                <span style="padding:5em">Long Description:</span> <textarea name="long_description" value="{{ long_description }}" rows=5 cols=40></textarea><br>
-                <span style="padding:5em">GitHub Link(s):</span> <input type="text" name="link" value="{{ link }}"><br>
-                <input type="submit" name="submit" value="Create">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" value="{{ title }}"
+                           class="form-control" placeholder="Enter project name">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" name="description" id="description" value="{{ description }}"
+                           class="form-control" placeholder="Enter a short description">
+                </div>
+                <div class="form-group">
+                    <label for="long_description">Details</label>
+                    <textarea name="long_description" id="long_description" value="{{ long_description }}" placeholder="Enter project name"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="link">Link</label>
+                    <input type="text" name="link" id="link" value="{{ link }}"
+                           class="form-control" placeholder="Enter the main link">
+                </div>
+                <input type="submit" name="submit" class="btn btn-default" value="Create">
             </div>
         </form>
 
