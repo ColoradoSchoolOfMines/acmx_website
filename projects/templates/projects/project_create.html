@@ -10,7 +10,8 @@
 {% block title %}New Project | ACMx Labs{% endblock %}
 
 {% block content %}
-    <div id="page_content">
+    <div id="page_content "class="container-fluid col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" style="margin-bottom:100px;">
+        <!-- TODO: Move that margin outta here. -->
         <h3>Create a new project!</h3>
         <form action="{{ action }}" method="POST" role="form">
             {% csrf_token %}
