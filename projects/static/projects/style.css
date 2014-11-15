@@ -245,6 +245,8 @@ div#page_content {
   color: white; }
   div#page_content .editor-toolbar a {
     color: white !important; }
+  div#page_content .editor-preview {
+    background-color: #141414 !important; }
 
 /* 
  * Custom @media directives.
