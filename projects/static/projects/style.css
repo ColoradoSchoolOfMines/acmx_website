@@ -334,6 +334,11 @@ div.project-content {
   div.project-content h1 {
     margin-top: 0px; }
 
+div#page_content {
+  color: white; }
+  div#page_content .editor-toolbar a {
+    color: white !important; }
+
 /* 
  * Custom @media directives.
  */
