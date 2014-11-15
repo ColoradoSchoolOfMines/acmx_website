@@ -17,6 +17,7 @@
                                         <h5>{{ project.description }}</h5>
                                     </hgroup>
                                     <div>
+                                        <a href="{% url 'projects:detail' project.slug %}"><p>View project page</p></a>
                                         <p>{{ project.long_description }}</p>
                                         <p>Primary Languages Used: {{ project.languages }}</p>
                                         <p>Contributors: {{ project.contributors }}</p>
