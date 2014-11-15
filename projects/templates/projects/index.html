@@ -9,7 +9,7 @@
                     <div class="col-mid-8" style="padding-bottom: 200px">
                         {% if user.is_authenticated %}
                             <h1> Welcome to ACMx!</h1>
-                            <p>You are now logged in, congrats</p>
+                            <p>Here is a list of all of our projects:</p>
                             <div id="accordion">
                                 {% for project in project_list %}
                                     <hgroup>
@@ -18,7 +18,6 @@
                                     </hgroup>
                                     <div>
                                         <a href="{% url 'projects:detail' project.slug %}"><p>View project page</p></a>
-                                        <p>{{ project.long_description }}</p>
                                         <p>Primary Languages Used: {{ project.languages }}</p>
                                         <p>Contributors: {{ project.contributors }}</p>
                                         <p>GitHub link(s): {{ project.link }}</p>
