@@ -5,12 +5,20 @@ from django.utils.decorators import method_decorator
 from django.views import generic
 from django.utils import timezone
 
+import markdown
+
 from projects.models import Project, UserProfile
 
 
 class DetailView(generic.DetailView):
     model = Project
     template_name = 'projects/project.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(DetailView, self).get_context_data(**kwargs)
+        context['details'] = markdown.markdown(self.object.long_description,
+                                               safe_mode='remove')
+        return context
 
 class IndexView(generic.list.ListView):
     model = Project
