@@ -34,6 +34,16 @@
                     <input type="text" name="link" id="link" value="{{ project.link }}"
                            class="form-control" placeholder="Enter the main link">
                 </div>
+                <div class="form-group">
+                    <label for="contributors">Contributors</label>
+                    <input type="text" name="contributors" id="contributors" value="{{ project.contributors }}"
+                           class="form-control" placeholder="Enter the contributors">
+                </div>
+                <div class="form-group">
+                    <label for="languages">Languages</label>
+                    <input type="text" name="languages" id="languages" value="{{ project.languages }}"
+                           class="form-control" placeholder="Enter the primary languages used">
+                </div>
                 <input type="submit" name="submit" class="btn btn-default" value="Save">
             </div>
         </form>
