@@ -402,6 +402,13 @@ div.project-content {
         margin-top: 0px;
     }
 }
+div#page_content {
+    color: white;
+
+    .editor-toolbar a {
+        color: white !important;
+    }
+}
 
 /* 
  * Custom @media directives.
