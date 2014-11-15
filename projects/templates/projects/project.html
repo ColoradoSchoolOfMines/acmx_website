@@ -10,7 +10,7 @@
           <h1>{{ project.title }}</h1>
           <h4>{{ details|safe }}</h4>
           <h5>Contributors: {{ project.contributors }}</h5>
-          <img src="project_image.jpg">
+          <img src="{{ project.image }}" />
           <br>
           <h3>GitHub Link: {{ project.link }}</h4>
         </div>
