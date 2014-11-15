@@ -1,3 +1,4 @@
 https://github.com/django/django/archive/stable/1.7.x.zip
 django-allauth==0.18.0
 Pillow==2.6.1
+Markdown

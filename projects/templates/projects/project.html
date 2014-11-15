@@ -9,7 +9,7 @@
         <div class="panel panel-default project-content">
           <div class="panel-heading">
             <h1>{{ project.title }}</h1>
-            <h4>{{ project.long_description }}</h4>
+            <h4>{{ details|safe }}</h4>
             <h5>Contributors: {{ project.contributors }}</h5>
             <img src="project_image.jpg">
             <br>
