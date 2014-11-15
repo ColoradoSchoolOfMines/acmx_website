@@ -7220,7 +7220,7 @@ Editor.prototype.render = function(el) {
 
   this.codemirror = CodeMirror.fromTextArea(el, {
     mode: 'markdown',
-    theme: 'paper',
+    theme: 'twilight',
     tabSize: '2',
     indentWithTabs: true,
     lineNumbers: false,
