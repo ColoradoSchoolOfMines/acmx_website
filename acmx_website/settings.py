@@ -115,3 +115,7 @@ STATIC_URL = '/static/'
 # Custom
 LOGIN_URL = '/accounts/google/login/'
 LOGIN_REDIRECT_URL = '/'
+try:
+    MEDIA_ROOT = secrets.MEDIA_ROOT
+except AttributeError:
+    pass
