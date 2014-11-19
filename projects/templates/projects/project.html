@@ -9,7 +9,7 @@
         <div class="project-content">
           <h1>{{ project.title }}</h1>
           {{ details|safe }}
-          <img src="{{ project.image }}" /><br>
+          <img src="/media/{{ project.image }}" /><br>
           <h5>GitHub Link: {{ project.link }}</h5>
           <h5>Contributors: {{ project.contributors }}</h5>
           <h5>Primary Languages Used: {{ project.languages }}</h5>
