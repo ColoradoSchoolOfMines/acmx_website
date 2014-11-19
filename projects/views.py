@@ -32,7 +32,8 @@ class IndexView(generic.list.ListView):
 class ProjectEditView(generic.edit.UpdateView):
     model = Project
     template_name = 'projects/project_edit.html'
-    fields = ['title', 'description', 'long_description', 'link', 'contributors', 'languages']
+    fields = ['title', 'description', 'long_description', 'link',
+              'contributors', 'languages', 'image']
 
     def get_success_url(self):
         # TODO: Is this safe?
@@ -47,7 +48,8 @@ class ProjectEditView(generic.edit.UpdateView):
 class ProjectCreateView(generic.edit.CreateView):
     model = Project
     template_name = 'projects/project_create.html'
-    fields = ['title', 'description', 'long_description', 'link', 'contributors', 'languages']
+    fields = ['title', 'description', 'long_description', 'link',
+              'contributors', 'languages', 'image']
 
     def get_success_url(self):
         # TODO: Is this safe?
