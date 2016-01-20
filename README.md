@@ -171,3 +171,18 @@ Django uses its own template language, mixed with HTML, to render site pages.
 All of these are in [projects/templates/](projects/templates/). Static files,
 like images, CSS and JavaScript, are stored in
 [projects/static/](projects/static/).
+
+### Deploying changes
+
+To deploy changes to acmxlabs.org, you'll need an account on the server that
+has been added to the correct group. Ask someone to set up an account for
+you, then:
+
+    git remote add deploy ssh://myusername@acmxlabs.org/git/acmx_deploy.git
+    git push deploy master
+
+If the changes don't show up, try Ctrl-Shift-R. If they still don't show
+up, you may need to reload the services on the server:
+
+    sudo service gunicorn reload
+    sudo service nginx reload
