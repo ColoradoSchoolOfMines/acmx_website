@@ -132,7 +132,7 @@ the changes, commit them:
 (**Note**: If you added new files instead of just changing ones that were
 already there, you should run `git add -A` at this point.)
 
-    git commit -m "A short description of what I changed."
+    git commit -m "Change X to make it better"
 
 And push the changes to GitHub:
 
